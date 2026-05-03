@@ -88,7 +88,7 @@
         color: black;
       }
 
-      /* HAMBURGER (hidden desktop) */
+      /* HAMBURGER */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -125,6 +125,7 @@
         padding: 15px 0;
         border-bottom: 1px solid #333;
         font-size: 16px;
+        cursor: pointer;
       }
 
       /* HERO */
@@ -213,7 +214,7 @@
         width: 150px;
       }
 
-      /* MOBILE ONLY CHANGES */
+      /* MOBILE */
       @media (max-width: 768px) {
         .brand-logo {
           left: 15px;
@@ -224,13 +225,11 @@
           height: 55px;
         }
 
-        /* hide desktop nav */
         .nav-menu,
         .nav-btn {
           display: none;
         }
 
-        /* show hamburger */
         .hamburger {
           display: flex;
         }
@@ -282,7 +281,6 @@
 
       <button class="nav-btn">📅 SCHEDULE CONSULTATION</button>
 
-      <!-- HAMBURGER -->
       <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -302,7 +300,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-image-wrapper">
-        <img src="Images/SKheadercity.png" class="main-image" />
+        <img src="Images/skheadercity.png" class="main-image" />
 
         <div class="hero-text">
           <div class="hero-title">
@@ -338,10 +336,37 @@
     </footer>
 
     <script>
+      const menu = document.getElementById("mobileMenu");
+      const hamburger = document.querySelector(".hamburger");
+
       function toggleMenu() {
-        document.getElementById("mobileMenu").classList.toggle("active");
+        menu.classList.toggle("active");
+        document.body.style.overflow = menu.classList.contains("active")
+          ? "hidden"
+          : "auto";
       }
 
+      // Close when clicking menu item
+      document.querySelectorAll("#mobileMenu li").forEach((item) => {
+        item.addEventListener("click", () => {
+          menu.classList.remove("active");
+          document.body.style.overflow = "auto";
+        });
+      });
+
+      // Close when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          menu.classList.contains("active") &&
+          !menu.contains(e.target) &&
+          !hamburger.contains(e.target)
+        ) {
+          menu.classList.remove("active");
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // SCROLL NAV
       let lastScrollY = window.scrollY;
 
       window.addEventListener("scroll", () => {
