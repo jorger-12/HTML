@@ -83,6 +83,11 @@
         font-size: 9px;
       }
 
+      .nav-btn:hover {
+        background: #e4c376;
+        color: black;
+      }
+
       /* HAMBURGER */
       .hamburger {
         display: none;
@@ -112,7 +117,11 @@
         width: 70%;
         height: 100%;
         background: #000;
-        padding: 80px 20px;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         transform: translateX(100%);
         transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -124,7 +133,27 @@
         transform: translateX(0);
       }
 
-      .mobile-menu li {
+      .menu-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu-logo {
+        height: 50px;
+      }
+
+      .close-btn {
+        font-size: 28px;
+        color: #e4c376;
+        cursor: pointer;
+      }
+
+      .menu-links {
+        margin-top: 30px;
+      }
+
+      .menu-links li {
         list-style: none;
         padding: 15px 0;
         border-bottom: 1px solid #e4c376;
@@ -133,7 +162,6 @@
       }
 
       .mobile-cta {
-        margin-top: 25px;
         padding: 12px;
         text-align: center;
         border: 1px solid #e4c376;
@@ -277,11 +305,9 @@
         .hero-title {
           font-size: 18px;
         }
-
         .hero-sub {
           font-size: 14px;
         }
-
         .hero-desc {
           font-size: 12px;
         }
@@ -296,13 +322,11 @@
   </head>
 
   <body>
-    <!-- LOGO -->
     <div class="brand-logo">
       <img src="Images/SKlogo2.png" />
       <img src="Images/SKlogo3.png" />
     </div>
 
-    <!-- NAV -->
     <nav>
       <ul class="nav-menu">
         <li class="active">HOME</li>
@@ -323,18 +347,26 @@
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-      <li>HOME</li>
-      <li>ABOUT US</li>
-      <li>SERVICES</li>
-      <li>INDUSTRIES</li>
-      <li>CONTACT</li>
+      <div>
+        <div class="menu-top">
+          <img src="Images/SKlogo1.png" class="menu-logo" />
+          <div class="close-btn" onclick="closeMenu()">✕</div>
+        </div>
+
+        <ul class="menu-links">
+          <li>HOME</li>
+          <li>ABOUT US</li>
+          <li>SERVICES</li>
+          <li>INDUSTRIES</li>
+          <li>CONTACT</li>
+        </ul>
+      </div>
 
       <div class="mobile-cta">📅 SCHEDULE CONSULTATION</div>
     </div>
 
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-image-wrapper">
         <img src="Images/SKheadercity.png" class="main-image" />
@@ -344,9 +376,7 @@
             ELEVATING BUSINESSES<br />
             THROUGH DIGITAL EXCELLENCE
           </div>
-
           <div class="hero-sub">Websites. Data Systems. Marketing.</div>
-
           <div class="hero-desc">
             Refined digital infrastructure designed to enhance performance,
             elevate perception, and support long-term expansion.
@@ -357,19 +387,15 @@
       </div>
     </section>
 
-    <!-- SECOND SECTION -->
     <section class="section-image">
       <img src="Images/SKAboutus.png" />
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <img src="Images/SKlogo1.png" class="footer-logo" />
-
       <div class="social-icons">
         <img src="Images/SKsocialmedia.png" />
       </div>
-
       <br />
       © 2026 SK International Strategy & Consulting LLC
     </footer>
@@ -381,21 +407,12 @@
       function toggleMenu() {
         menu.classList.toggle("active");
         overlay.classList.toggle("active");
-
-        document.body.style.overflow = menu.classList.contains("active")
-          ? "hidden"
-          : "auto";
       }
 
       function closeMenu() {
         menu.classList.remove("active");
         overlay.classList.remove("active");
-        document.body.style.overflow = "auto";
       }
-
-      document.querySelectorAll("#mobileMenu li").forEach((item) => {
-        item.addEventListener("click", closeMenu);
-      });
 
       overlay.addEventListener("click", closeMenu);
 
