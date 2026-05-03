@@ -116,11 +116,9 @@
         right: 0;
         width: 70%;
         height: 100%;
-        background: #000;
 
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         transform: translateX(100%);
         transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -132,49 +130,67 @@
         transform: translateX(0);
       }
 
-      /* TOP */
+      /* TOP BLACK */
       .menu-top {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
+        background: #000;
       }
 
       .menu-logo {
         height: 50px;
       }
 
+      /* GOLD X */
       .close-btn {
         position: absolute;
         left: 20px;
         top: 20px;
         font-size: 26px;
-        color: black;
+        color: #e4c376;
         cursor: pointer;
+      }
+
+      /* DIVIDER */
+      .menu-divider {
+        height: 2px;
+        background: linear-gradient(to right, #e4c376, #000);
+      }
+
+      /* GOLD BODY */
+      .menu-body {
+        background: #e4c376;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
       /* LINKS */
       .menu-links {
-        padding: 0 20px;
+        padding: 20px;
       }
 
       .menu-links li {
         list-style: none;
         padding: 15px 0;
-        border-bottom: 1px solid #e4c376;
+        border-bottom: 1px solid black;
         font-size: 16px;
+        color: black;
         cursor: pointer;
       }
 
-      /* GOLD CTA */
+      /* CTA */
       .mobile-cta {
-        background: #e4c376;
-        color: black;
         text-align: center;
-        padding: 18px;
+        padding: 20px;
         font-size: 14px;
         font-weight: 600;
+        color: black;
+        border-top: 1px solid black;
       }
 
       /* OVERLAY */
@@ -210,6 +226,7 @@
       .main-image {
         width: 100%;
         max-width: 1600px;
+        display: block;
       }
 
       .hero-text {
@@ -246,6 +263,9 @@
         color: #e4c376;
         font-size: 30px;
         letter-spacing: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
       }
 
       /* SECOND SECTION */
@@ -349,12 +369,14 @@
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-      <div>
-        <div class="menu-top">
-          <img src="Images/SKlogo1.png" class="menu-logo" />
-          <div class="close-btn" onclick="closeMenu()">✕</div>
-        </div>
+      <div class="menu-top">
+        <img src="Images/SKlogo1.png" class="menu-logo" />
+        <div class="close-btn" onclick="closeMenu()">✕</div>
+      </div>
 
+      <div class="menu-divider"></div>
+
+      <div class="menu-body">
         <ul class="menu-links">
           <li>HOME</li>
           <li>ABOUT US</li>
@@ -362,9 +384,9 @@
           <li>INDUSTRIES</li>
           <li>CONTACT</li>
         </ul>
-      </div>
 
-      <div class="mobile-cta">📅 SCHEDULE CONSULTATION</div>
+        <div class="mobile-cta">📅 SCHEDULE CONSULTATION</div>
+      </div>
     </div>
 
     <div class="menu-overlay" id="menuOverlay"></div>
@@ -397,11 +419,9 @@
 
     <footer>
       <img src="Images/SKlogo1.png" class="footer-logo" />
-
       <div class="social-icons">
         <img src="Images/SKsocialmedia.png" />
       </div>
-
       <br />
       © 2026 SK International Strategy & Consulting LLC
     </footer>
