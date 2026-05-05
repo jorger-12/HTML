@@ -29,14 +29,18 @@
       }
 
       .brand-logo img {
-        height: 110px;
+        height: clamp(80px, 8vw, 130px);
       }
 
       /* NAV */
       nav {
         position: fixed;
         top: 0;
-        right: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        max-width: 1600px;
+        margin: 0;
         z-index: 1000;
         display: flex;
         align-items: center;
@@ -47,7 +51,7 @@
       }
 
       nav.hide {
-        transform: translateY(-100%);
+        transform: translateX(-50%) translateY(-100%);
       }
 
       .nav-menu {
@@ -61,10 +65,12 @@
       .nav-menu li {
         font-size: 10px;
         padding: 6px 12px;
+        white-space: nowrap;
         border-radius: 20px;
         background: rgba(0, 0, 0, 0.8);
         cursor: pointer;
         color: #fff;
+        transform: scale(1);
       }
 
       .nav-menu li.active,
@@ -76,6 +82,7 @@
       .nav-btn {
         margin-top: 16px;
         padding: 6px 12px;
+        white-space: nowrap;
         border-radius: 20px;
         border: 1px solid #e4c376;
         color: #e4c376;
@@ -224,8 +231,8 @@
 
       .hero-image-wrapper {
         position: relative;
-        display: flex;
-        justify-content: center;
+        max-width: 1600px;
+        margin: 0 auto;
       }
 
       .main-image {
@@ -236,37 +243,39 @@
 
       .hero-text {
         position: absolute;
-        top: 35%;
-        left: 50px;
-        transform: translateY(-30%);
-        max-width: 550px;
+        top: 28%;
+        left: clamp(20px, 4vw, 80px);
+        max-width: min(550px, 90%);
       }
 
       .hero-title {
         color: #e4c376;
-        font-size: 30px;
+        font-size: clamp(18px, 2.2vw, 30px);
         font-weight: 600;
         margin-bottom: 12px;
       }
 
       .hero-sub {
-        font-size: 24px;
+        font-size: clamp(12px, 1.6vw, 24px);
         margin-bottom: 10px;
       }
 
       .hero-desc {
-        font-size: 16px;
+        font-size: clamp(10px, 1.2vw, 16px);
         color: #ccc;
         line-height: 1.6;
+        max-width: 400px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
 
       .solutions-text {
         position: absolute;
-        bottom: 155px;
+        bottom: 21%;
         left: 50%;
         transform: translateX(-50%);
         color: #e4c376;
-        font-size: 30px;
+        font-size: clamp(14px, 2vw, 30px);
         letter-spacing: 4px;
         font-weight: 600;
         text-transform: uppercase;
@@ -304,14 +313,14 @@
       }
 
       /* MOBILE */
-      @media (max-width: 768px) {
+      @media (max-width: 1100px) {
         .brand-logo {
           left: 15px;
           gap: 8px;
         }
 
         .brand-logo img {
-          height: 55px;
+          height: clamp(55px, 6vw, 80px);
         }
 
         .nav-menu,
@@ -341,7 +350,7 @@
         }
 
         .solutions-text {
-          bottom: 45px;
+          bottom: 55px;
           font-size: 10px;
           letter-spacing: 1px;
         }
@@ -350,11 +359,6 @@
   </head>
 
   <body>
-    <div class="brand-logo">
-      <img src="Images/SKlogo2.png" />
-      <img src="Images/SKlogo3.png" />
-    </div>
-
     <nav>
       <ul class="nav-menu">
         <li class="active">HOME</li>
@@ -399,6 +403,10 @@
 
     <section class="hero">
       <div class="hero-image-wrapper">
+        <div class="brand-logo">
+          <img src="Images/SKlogo2.png" />
+          <img src="Images/SKlogo3.png" />
+        </div>
         <img src="Images/SKheadercity.png" class="main-image" />
 
         <div class="hero-text">
