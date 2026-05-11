@@ -458,30 +458,57 @@
           display: flex;
         }
 
+        /* HERO */
         .hero-text {
           top: 30%;
           left: 15px;
           right: 15px;
+
+          max-width: 85%;
+
           transform: none;
         }
 
         .hero-title {
-          font-size: 18px;
-        }
-        .hero-sub {
-          font-size: 14px;
-        }
-        .hero-desc {
-          font-size: 12px;
+          font-size: clamp(16px, 4vw, 22px);
+          line-height: 1.1;
         }
 
+        .hero-sub {
+          font-size: clamp(12px, 2.8vw, 16px);
+          margin-top: 6px;
+        }
+
+        .hero-desc {
+          font-size: clamp(11px, 2.3vw, 14px);
+
+          line-height: 1.4;
+
+          max-width: 280px;
+        }
+
+        /* EXECUTIVE SOLUTIONS */
         .solutions-text {
-          bottom: 55px;
+          bottom: clamp(40px, 8vw, 70px);
+
           left: 15px;
-          font-size: 15px;
+
+          font-size: clamp(12px, 3vw, 16px);
+
           letter-spacing: 1px;
+
           transform: none;
         }
+
+        /* FIX MOBILE OVERLAP */
+        .section-image {
+          margin-top: 0;
+
+          z-index: 1;
+
+          overflow: hidden;
+        }
+
         /* SKSEC1 MOBILE */
         .section-content {
           inset: 0;
@@ -489,7 +516,7 @@
 
         /* TITLE */
         .section-title {
-          top: 18%;
+          top: 26%;
           left: 50%;
 
           transform: translateX(-50%);
@@ -505,6 +532,7 @@
 
         .section-title::after {
           width: 75%;
+
           height: 1.5px;
 
           margin-top: 8px;
@@ -512,7 +540,7 @@
 
         /* DESCRIPTION */
         .section-desc {
-          top: 40%;
+          top: 46%;
           left: 50%;
 
           transform: translateX(-50%);
@@ -528,7 +556,7 @@
 
         /* BULLETS */
         .section-points {
-          top: 52%;
+          top: 60%;
           left: 50%;
 
           transform: translateX(-50%);
