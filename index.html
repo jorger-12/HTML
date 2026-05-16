@@ -293,7 +293,11 @@
         width: 100%;
         max-width: 1600px;
         display: block;
-
+      }
+      .section-image:not(.section-two):not(.section-three):not(
+          .section-four
+        ):not(.section-five):not(.section-six)
+        img {
         -webkit-mask-image: linear-gradient(
           to bottom,
           transparent 0%,
@@ -433,7 +437,7 @@
 
       /* SECTION 2 - MARKETING*/
       .section-two {
-        margin-top: -75px;
+        margin-top: 0;
         position: relative;
         z-index: 3;
       }
@@ -499,7 +503,7 @@
       .section-two .section-points {
         position: absolute;
 
-        top: 60%;
+        top: 59%;
         left: 24%;
 
         transform: translateX(-10%);
@@ -512,11 +516,414 @@
 
         color: #d7d7d7;
         font-size: clamp(14px, 0.95vw, 18px);
-        line-height: 1.3;
+        line-height: 1.1;
       }
 
       .section-two .point strong {
         color: #e4c376;
+      }
+      /* GOLD BULLETS */
+      .section-two .point strong::before {
+        content: "◆";
+        color: #c89b3c;
+        margin-right: 8px;
+      }
+
+      /* SECTION 3 - AUTOMATION*/
+      .section-three {
+        margin-top: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .section-three img {
+        width: 100%;
+        max-width: 1600px;
+        display: block;
+      }
+
+      /* TITLE */
+      .section-three .section-title {
+        position: absolute;
+
+        top: 15%;
+        left: 63%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 30vw, 520px);
+
+        color: black;
+        font-size: clamp(26px, 2.6vw, 44px);
+        font-weight: 700;
+        line-height: 1.02;
+      }
+
+      .section-three .section-title span {
+        color: #c89b3c;
+      }
+
+      /* UNDERLINE */
+      .section-three .section-title::after {
+        content: "";
+
+        display: block;
+
+        width: 72%;
+        height: 1px;
+
+        background: black;
+
+        margin-top: 8px;
+      }
+
+      /* DESCRIPTION */
+      .section-three .section-desc {
+        position: absolute;
+
+        top: 35%;
+        left: 63%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 32vw, 540px);
+
+        color: #111;
+        font-size: clamp(14px, 1.2vw, 20px);
+        line-height: 1.4;
+      }
+
+      /* BULLETS */
+      .section-three .section-points {
+        position: absolute;
+
+        top: 45%;
+        left: 63%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 32vw, 540px);
+      }
+
+      .section-three .point {
+        margin-bottom: 14px;
+
+        color: #111;
+        font-size: clamp(12px, 0.95vw, 16px);
+        line-height: 1.3;
+      }
+
+      .section-three .point strong {
+        color: black;
+      }
+
+      /* GOLD BULLETS */
+      .section-three .point strong::before {
+        content: "◆";
+        color: #c89b3c;
+        margin-right: 8px;
+      }
+
+      /* SECTION 4 - ANALYTICS */
+      .section-four {
+        margin-top: 0px;
+        position: relative;
+        z-index: 3;
+      }
+
+      .section-four img {
+        width: 100%;
+        max-width: 1600px;
+        display: block;
+      }
+
+      /* TITLE */
+      .section-four .section-title {
+        position: absolute;
+
+        top: 10%;
+        left: 19%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 30vw, 520px);
+
+        color: white;
+        font-size: clamp(24px, 2.5vw, 42px);
+        font-weight: 700;
+        line-height: 1.02;
+      }
+
+      .section-four .section-title span {
+        color: #e4c376;
+      }
+
+      /* UNDERLINE */
+      .section-four .section-title::after {
+        content: "";
+
+        display: block;
+
+        width: 72%;
+        height: 1px;
+
+        background: #e4c376;
+
+        margin-top: 8px;
+      }
+
+      /* DESCRIPTION */
+      .section-four .section-desc {
+        position: absolute;
+
+        top: 30%;
+        left: 19%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 32vw, 540px);
+
+        color: #d7d7d7;
+        font-size: clamp(14px, 1.2vw, 20px);
+        line-height: 1.2;
+      }
+
+      /* BULLETS */
+      .section-four .section-points {
+        position: absolute;
+
+        top: 45%;
+        left: 19%;
+
+        transform: translateX(-10%);
+
+        width: clamp(360px, 32vw, 540px);
+      }
+
+      .section-four .point {
+        margin-bottom: 14px;
+
+        color: #d7d7d7;
+        font-size: clamp(14px, 0.95vw, 18px);
+        line-height: 1.3;
+      }
+
+      .section-four .point strong {
+        color: #e4c376;
+      }
+
+      /* SECTION 5 - STRATEGY */
+      .section-five {
+        margin-top: 0;
+        position: relative;
+        z-index: 3;
+      }
+
+      .section-five img {
+        width: 100%;
+        max-width: 1600px;
+        display: block;
+      }
+
+      /* TITLE */
+      .section-five .section-title {
+        position: absolute;
+
+        top: 25%;
+        left: 70%;
+
+        transform: translateX(-20%);
+
+        width: clamp(420px, 34vw, 620px);
+
+        color: black;
+        font-size: clamp(26px, 2.7vw, 46px);
+        font-weight: 700;
+        line-height: 1.02;
+      }
+
+      .section-five .section-title span {
+        color: #c89b3c;
+      }
+
+      /* UNDERLINE */
+      .section-five .section-title::after {
+        content: "";
+
+        display: block;
+
+        width: 72%;
+        height: 1px;
+
+        background: black;
+
+        margin-top: 8px;
+      }
+
+      /* DESCRIPTION */
+      .section-five .section-desc {
+        position: absolute;
+
+        top: 45%;
+        left: 70%;
+
+        transform: translateX(-20%);
+
+        width: clamp(420px, 32vw, 600px);
+
+        color: #111;
+        font-size: clamp(14px, 1.15vw, 20px);
+        line-height: 1.35;
+      }
+
+      /* BULLETS */
+      .section-five .section-points {
+        position: absolute;
+
+        top: 60%;
+        left: 70%;
+
+        transform: translateX(-20%);
+
+        width: clamp(420px, 36vw, 640px);
+      }
+
+      .section-five .point {
+        margin-bottom: 14px;
+
+        color: #111;
+        font-size: clamp(13px, 0.95vw, 17px);
+        line-height: 1.3;
+      }
+
+      .section-five .point strong {
+        color: black;
+      }
+      /* GOLD BULLETS */
+      .section-five .point strong::before {
+        content: "◆";
+        color: #c89b3c;
+        margin-right: 8px;
+      }
+
+      /* SECTION 6 - WEBSITE DESIGN */
+      .section-six {
+        margin-top: 0;
+        position: relative;
+        z-index: 3;
+      }
+
+      .section-six img {
+        width: 100%;
+        max-width: 1600px;
+        display: block;
+      }
+
+      /* TITLE */
+      .section-six .section-title {
+        position: absolute;
+
+        top: 10%;
+        left: 18%;
+
+        transform: translateX(-10%);
+
+        width: clamp(420px, 34vw, 620px);
+
+        color: white;
+        font-size: clamp(26px, 2.7vw, 46px);
+        font-weight: 700;
+        line-height: 1.02;
+      }
+
+      .section-six .section-title span {
+        color: #c89b3c;
+      }
+
+      /* UNDERLINE */
+      .section-six .section-title::after {
+        content: "";
+
+        display: block;
+
+        width: 72%;
+        height: 1px;
+
+        background: #c89b3c;
+
+        margin-top: 8px;
+      }
+
+      /* DESCRIPTION */
+      .section-six .section-desc {
+        position: absolute;
+
+        top: 30%;
+        left: 18%;
+
+        transform: translateX(-10%);
+
+        width: clamp(420px, 36vw, 640px);
+
+        color: #d7d7d7;
+        font-size: clamp(16px, 1.15vw, 24px);
+        line-height: 1.35;
+      }
+
+      /* BULLETS */
+      .section-six .section-points {
+        position: absolute;
+
+        top: 37%;
+        left: 18%;
+
+        transform: translateX(-10%);
+
+        width: clamp(420px, 36vw, 640px);
+      }
+
+      .section-six .point {
+        margin-bottom: 14px;
+
+        color: #d7d7d7;
+        font-size: clamp(13px, 0.95vw, 17px);
+        line-height: 1.3;
+      }
+
+      .section-six .point strong {
+        color: #d7d7d7;
+      }
+      /* GOLD BULLETS */
+      .section-six .point strong::before {
+        content: "◆";
+        color: #c89b3c;
+        margin-right: 8px;
+      }
+
+      /* GOLD DIVIDER */
+      .gold-divider {
+        width: 100%;
+        height: 2px;
+
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          #8a6420 15%,
+          #e4c376 50%,
+          #8a6420 85%,
+          transparent 100%
+        );
+
+        max-width: 1600px;
+
+        margin: -2px auto 0 auto;
+
+        position: relative;
+        z-index: 20;
+
+        box-shadow:
+          0 0 8px rgba(228, 195, 118, 0.45),
+          0 0 18px rgba(228, 195, 118, 0.2);
       }
 
       /* FOOTER */
@@ -688,7 +1095,7 @@
           top: 80%;
           right: 2%;
         }
-              /*sec 2*/
+        /*sec 2*/
 
         .section-two .section-desc {
           top: 38%;
@@ -718,6 +1125,159 @@
           font-size: clamp(5px, 1.3vw, 8px);
 
           line-height: 1.1;
+        }
+        /* sec3*/
+        .section-three .section-desc {
+          top: 40%;
+          left: 6%;
+
+          width: 52%;
+
+          font-size: clamp(6px, 1.7vw, 10px);
+
+          line-height: 1.2;
+        }
+
+        .section-three .section-points {
+          top: 55%;
+          left: 6%;
+
+          width: 52%;
+        }
+
+        .section-three .point {
+          margin-bottom: 6px;
+
+          font-size: clamp(5px, 1.3vw, 8px);
+
+          line-height: 1.1;
+        }
+
+        /* SECTION 4 MOBILE */
+        .section-four .section-desc {
+          top: 38%;
+          left: 10%;
+
+          transform: none;
+
+          width: 52%;
+
+          font-size: clamp(6px, 1.7vw, 10px);
+
+          line-height: 1.2;
+        }
+
+        .section-four .section-points {
+          top: 52%;
+          left: 10%;
+
+          transform: none;
+
+          width: 52%;
+        }
+
+        .section-four .point {
+          margin-bottom: 6px;
+
+          font-size: clamp(5px, 1.3vw, 8px);
+
+          line-height: 1.1;
+        }
+
+        /* SECTION 5 MOBILE */
+        .section-five .section-title {
+          top: 18%;
+          left: 54%;
+
+          transform: translateX(-50%);
+
+          width: 42%;
+
+          font-size: clamp(12px, 3vw, 18px);
+
+          line-height: 1.02;
+        }
+
+        .section-five .section-desc {
+          top: 38%;
+          left: 54%;
+
+          transform: translateX(-50%);
+
+          width: 42%;
+
+          font-size: clamp(6px, 1.7vw, 10px);
+
+          line-height: 1.15;
+        }
+
+        .section-five .section-points {
+          top: 58%;
+          left: 54%;
+
+          transform: translateX(-50%);
+
+          width: 42%;
+        }
+
+        .section-five .point {
+          margin-bottom: 6px;
+
+          font-size: clamp(5px, 1.2vw, 8px);
+
+          line-height: 1.08;
+        }
+
+        /* SECTION 6 MOBILE */
+        .section-six .section-title {
+          top: 18%;
+          left: 10%;
+
+          transform: none;
+
+          width: 48%;
+
+          font-size: clamp(12px, 3vw, 18px);
+
+          line-height: 1.02;
+        }
+
+        .section-six .section-desc {
+          top: 38%;
+          left: 10%;
+
+          transform: none;
+
+          width: 48%;
+
+          font-size: clamp(6px, 1.7vw, 10px);
+
+          line-height: 1.15;
+        }
+
+        .section-six .section-points {
+          top: 56%;
+          left: 10%;
+
+          transform: none;
+
+          width: 48%;
+        }
+
+        .section-six .point {
+          margin-bottom: 6px;
+
+          font-size: clamp(5px, 1.2vw, 8px);
+
+          line-height: 1.08;
+        }
+
+        .gold-divider {
+          height: 1px;
+
+          box-shadow:
+            0 0 5px rgba(228, 195, 118, 0.35),
+            0 0 10px rgba(228, 195, 118, 0.15);
         }
       }
     </style>
@@ -828,6 +1388,8 @@
       </div>
     </section>
 
+    <div class="gold-divider"></div>
+
     <!-- SECTION 2 -->
     <section class="section-image section-two">
       <img src="Images/SKsec2.png" />
@@ -848,22 +1410,176 @@
 
         <div class="section-points">
           <div class="point">
+            <strong> Targeted campaigns that drive results </strong>
+          </div>
+
+          <div class="point">
+            <strong> High-quality leads that convert </strong>
+          </div>
+
+          <div class="point">
+            <strong> Stronger pipeline and increased revenue </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- SECTION 3 -->
+    <section class="section-image section-three">
+      <img src="Images/SKsec3.png" />
+
+      <div class="section-content">
+        <div class="section-title">
+          AUTOMATION &<br />
+          <span>INTEGRATION</span>
+        </div>
+
+        <div class="section-desc">
+          <strong>
+            Automate workflows and integrate your tools for maximum efficiency.
+          </strong>
+        </div>
+
+        <div class="section-points">
+          <div class="point">
+            <strong> Streamlined workflows and reduced manual work </strong>
+            <br />
+            Eliminate repetitive tasks with intelligent automation systems.
+          </div>
+
+          <div class="point">
+            <strong> Seamless integration across your tools </strong>
+            <br />
+            Connect platforms and applications into one unified ecosystem.
+          </div>
+
+          <div class="point">
+            <strong> Save time and reduce operational costs </strong>
+            <br />
+            Increase efficiency while lowering overhead and resource waste.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- SECTION 4 -->
+    <section class="section-image section-four">
+      <img src="Images/SKsec4.png" />
+
+      <div class="section-content">
+        <div class="section-title">
+          ANALYTICS &<br />
+          <span>REPORTING</span>
+        </div>
+
+        <div class="section-desc">
+          <strong>
+            Gain clarity with powerful dashboards and actionable insights.
+          </strong>
+        </div>
+
+        <div class="section-points">
+          <div class="point">
+            <strong> • Real-time dashboards and reporting </strong>
+          </div>
+
+          <div class="point">
+            <strong> • Data-driven insights for better decisions </strong>
+          </div>
+
+          <div class="point">
+            <strong> • Track performance and measure growth </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- SECTION 5 -->
+    <section class="section-image section-five">
+      <img src="Images/SKsec5.png" />
+
+      <div class="section-content">
+        <div class="section-title">
+          STRATEGY &<br />
+          <span>OPTIMIZATION</span>
+        </div>
+
+        <div class="section-desc">
+          <strong>
+            Build a scalable growth strategy backed by data, precision, and
+            continuous performance refinement to stay ahead in a competitive
+            market.
+          </strong>
+        </div>
+
+        <div class="section-points">
+          <div class="point">
             <strong>
-             • Targeted campaigns that drive results
+              Strategic planning aligned with long-term business objectives
             </strong>
           </div>
 
           <div class="point">
             <strong>
-             • High-quality leads that convert
+              Performance optimization driven by real-time insights and
+              analytics
             </strong>
           </div>
 
           <div class="point">
             <strong>
-             • Stronger pipeline and increased revenue
+              Continuous refinement to improve efficiency and maximize ROI
             </strong>
           </div>
+
+          <div class="point">
+            <strong>
+              Proactive strategies designed to accelerate sustainable growth
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- SECTION 6 -->
+    <section class="section-image section-six">
+      <img src="Images/SKsec6.png" />
+
+      <div class="section-content">
+        <div class="section-title">
+          WEBSITE DESIGN &<br />
+          <span>DEVELOPMENT</span>
+        </div>
+
+        <div class="section-desc">
+          <strong>
+            Modern, responsive websites built to impress and convert.
+          </strong>
+        </div>
+
+        <div class="section-points">
+          <div class="point">
+            <strong> Custom, user-friendly designs </strong>
+          </div>
+
+          <div class="point">
+            <strong> Responsive across all devices </strong>
+          </div>
+
+          <div class="point">
+            <strong> Built to convert visitors into customers </strong>
+          </div>
+
+          <div class="point">
+            <strong> Fast, secure, and optimized for performance </strong>
           </div>
         </div>
       </div>
