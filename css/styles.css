@@ -15,7 +15,7 @@
         position: fixed;
         top: 0;
         left: 50%;
-        transform: translate(-50%);
+        transform: translateX(-50%);
         width: 100%;
         max-width: 1600px;
         margin: 0;
@@ -134,7 +134,7 @@
         position: absolute;
         right: 20px;
         top: 50%;
-        transform: translate(-50%);
+        transform: translateY(-50%);
         font-size: 26px;
         color: #e4c376;
         cursor: pointer;
@@ -320,26 +320,6 @@
       .section-title {
         position: absolute;
         top: 32%;
-        left: 55.5%;
-
-        transform: translateX(-40%);
-
-        width: clamp(340px, 32vw, 460px);
-
-        color: black;
-        font-size: clamp(22px, 2.2vw, 38px);
-        font-weight: 700;
-        line-height: 1.02;
-      }
-
-      .section-title span {
-        color: #c89b3c;
-      }
-
-      /* MAIN TITLE */
-      .section-title {
-        position: absolute;
-        top: 32%;
         left: 57%;
 
         transform: translateX(-40%);
@@ -435,12 +415,6 @@
         z-index: 3;
       }
 
-      .section-two img {
-        width: 100%;
-        max-width: 1600px;
-        display: block;
-      }
-
       /* TITLE */
       .section-two .section-title {
         position: absolute;
@@ -527,12 +501,6 @@
         margin-top: 0;
         position: relative;
         z-index: 2;
-      }
-
-      .section-three img {
-        width: 100%;
-        max-width: 1600px;
-        display: block;
       }
 
       /* TITLE */
@@ -624,12 +592,6 @@
         z-index: 3;
       }
 
-      .section-four img {
-        width: 100%;
-        max-width: 1600px;
-        display: block;
-      }
-
       /* TITLE */
       .section-four .section-title {
         position: absolute;
@@ -710,12 +672,6 @@
         margin-top: 0;
         position: relative;
         z-index: 3;
-      }
-
-      .section-five img {
-        width: 100%;
-        max-width: 1600px;
-        display: block;
       }
 
       /* TITLE */
@@ -804,12 +760,6 @@
         margin-top: 0;
         position: relative;
         z-index: 3;
-      }
-
-      .section-six img {
-        width: 100%;
-        max-width: 1600px;
-        display: block;
       }
 
       /* TITLE */
