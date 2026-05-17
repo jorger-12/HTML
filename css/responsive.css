@@ -160,13 +160,14 @@
   }
 
   .mobile-process {
-    margin-top: 70px;
+    margin-top: 90px;
     text-align: center;
-    padding: 60px 8px 70px;
+    padding: 60px 8px 80px;
     background: transparent;
-    border-top: 1px solid rgba(228, 195, 118, 0.35);
-    border-bottom: 1px solid rgba(228, 195, 118, 0.35);
+    border-top: 1px solid rgba(228, 195, 118, 0.22);
+    border-bottom: 1px solid rgba(228, 195, 118, 0.22);
   }
+
   .mobile-process .mobile-label {
     color: #e4c376;
     font-size: 11px;
@@ -180,34 +181,51 @@
     font-size: 28px;
     line-height: 1.1;
     max-width: 300px;
-    margin: 0 auto 30px;
+    margin: 0 auto 38px;
   }
 
   .process-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .process-step {
+    background: rgba(18, 18, 18, 0.72);
+    border: 1px solid rgba(228, 195, 118, 0.18);
+    border-radius: 22px;
+    padding: 20px 10px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .process-icon {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(228, 195, 118, 0.4);
+
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    color: #e4c376;
+    font-size: 18px;
+    font-weight: 700;
   }
 
-  .process-row div {
-    flex: 1;
-    background: rgba(15, 15, 15, 0.9);
-    border: 1px solid rgba(228, 195, 118, 0.2);
-    border-radius: 18px;
-    padding: 18px 8px;
-  }
-
-  .process-row span {
+  .process-step span {
     display: block;
     color: #e4c376;
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
-  .process-row p {
+  .process-step p {
     color: #fff;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
   }
   footer {
