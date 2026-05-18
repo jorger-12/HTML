@@ -31,7 +31,7 @@
   }
 
   .mobile-hero {
-    min-height: 620px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -111,7 +111,7 @@
   }
 
   .mobile-services {
-    margin-top: 80px;
+    margin-top: 24px;
     position: relative;
     z-index: 10;
   }
@@ -604,6 +604,20 @@
     line-height: 1.35;
     margin: 0;
   }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   footer {
     position: relative;
 
