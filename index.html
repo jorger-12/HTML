@@ -70,7 +70,7 @@
         <li>CONTACT</li>
       </ul>
 
-      <button class="nav-btn">📅 SCHEDULE CONSULTATION</button>
+      <a href="#contact" class="nav-btn">📅 SCHEDULE CONSULTATION</a>
 
       <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -97,7 +97,15 @@
           <li>CONTACT</li>
         </ul>
 
-        <div class="mobile-cta">📅 SCHEDULE CONSULTATION</div>
+        <div
+          class="mobile-cta"
+          onclick="
+            closeMenu();
+            location.href = '#contact';
+          "
+        >
+          📅 SCHEDULE CONSULTATION
+        </div>
       </div>
     </div>
 
@@ -350,10 +358,10 @@
           </div>
         </div>
       </section>
-      <section class="mobile-contact-section reveal">
+      <section class="mobile-contact-section reveal" id="contact">
         <p class="mobile-label">PRIVATE CONSULTATION</p>
 
-        <h2>Let’s Build Something Exceptional</h2>
+        <h2>Let’s Build<br />Something Exceptional</h2>
 
         <form class="mobile-contact-form">
           <input type="text" placeholder="Your Name" required />

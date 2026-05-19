@@ -761,10 +761,10 @@
 
   .mobile-contact-section h2 {
     color: #fff;
-    font-size: 26px;
-    line-height: 1.08;
+    font-size: 24px;
+    line-height: 1.05;
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .contact-intro {
@@ -850,8 +850,8 @@
     align-items: center;
     justify-content: center;
 
-    min-height: 30px;
-    padding: 6px 10px;
+    min-height: 28px;
+    padding: 5px 8px;
 
     border-radius: 999px;
     border: 1px solid rgba(228, 195, 118, 0.14);
@@ -859,7 +859,7 @@
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.82);
 
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
     text-align: center;
     line-height: 1.1;
@@ -876,7 +876,7 @@
 
   .mobile-contact-form textarea {
     resize: none;
-    min-height: 90px;
+    min-height: 78px;
   }
 
   .mobile-contact-form button {
@@ -893,6 +893,21 @@
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+  .mobile-contact-form input:focus,
+  .mobile-contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    border-color: rgba(228, 195, 118, 0.35);
+    box-shadow: none;
+  }
+  .mobile-contact-form input:-webkit-autofill,
+  .mobile-contact-form input:-webkit-autofill:hover,
+  .mobile-contact-form input:-webkit-autofill:focus,
+  .mobile-contact-form textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #111 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 1px solid rgba(228, 195, 118, 0.12);
   }
 
   .reveal {
