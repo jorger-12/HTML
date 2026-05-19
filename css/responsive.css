@@ -479,6 +479,29 @@
   .testimonial-author small {
     color: #b8b8b8;
   }
+  .google-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    transform: translateX(-12px);
+  }
+
+  .google-badge img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .google-badge small {
+    color: #b8b8b8;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin: 0;
+  }
   .featured-solutions {
     margin-top: 4px;
     padding: 0;
@@ -502,7 +525,7 @@
   }
 
   .solution-card {
-    padding: 18px 16px;
+    padding: 14px 16px;
     border-radius: 18px;
 
     background: linear-gradient(
@@ -525,17 +548,17 @@
   .solution-card h4 {
     color: #9f7b32;
     font-size: 0.95rem;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .solution-card p {
     color: #222;
-    font-size: 0.8rem;
-    line-height: 1.45;
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .mobile-cta-section {
-    margin-top: 16px;
+    margin-top: 28px;
     margin-bottom: 6px;
 
     padding: 24px 24px;
@@ -586,10 +609,10 @@
 
   .mobile-cta-section h2 {
     color: #fff;
-    font-size: 21px;
-    line-height: 1.08;
-    font-weight: 700;
-    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 14px;
     position: relative;
     z-index: 2;
   }
@@ -606,22 +629,34 @@
 
   .mobile-cta-btn {
     display: inline-block;
-    padding: 14px 26px;
-    border-radius: 28px;
+    padding: 13px 26px;
+    border-radius: 32px;
 
-    background: #e4c376;
+    background: linear-gradient(145deg, #f0d48b, #d6ab45);
+
     color: #000;
-
     font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
 
-    box-shadow: 0 8px 18px rgba(228, 195, 118, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+      0 10px 26px rgba(228, 195, 118, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45);
 
     position: relative;
     z-index: 2;
+
+    transition: all 0.3s ease;
+  }
+  .mobile-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 14px 32px rgba(228, 195, 118, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .mobile-proof-section {
@@ -823,13 +858,24 @@
 
   .social-icons img {
     width: 100px;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 10px rgba(228, 195, 118, 0.45));
+  }
+  .social-icons img:active {
+    transform: scale(0.96);
   }
 
   footer::after {
     content: "© 2026 SK International Strategy & Consulting LLC";
     position: absolute;
-    left: 24px;
-    bottom: 42px;
+    left: 30px;
+    bottom: 14px;
     color: #fff;
     font-size: 11px;
     white-space: nowrap;
@@ -837,5 +883,40 @@
 
   footer br {
     display: none;
+  }
+  .footer-contact {
+    position: absolute;
+    left: 43px;
+    bottom: 36px;
+    z-index: 2;
+  }
+
+  .footer-contact p {
+    color: #e4c376;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+    margin-left: -14px;
+  }
+
+  .footer-contact a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+  }
+  .footer-email {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: -14px;
+  }
+  .footer-email span {
+    color: #e4c376;
+    font-size: 12px;
+    line-height: 1;
   }
 }
