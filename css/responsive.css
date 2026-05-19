@@ -775,6 +775,9 @@
     margin: 0 auto 20px;
   }
 
+  #contact {
+    scroll-margin-top: 32px;
+  }
   .mobile-contact-form {
     display: flex;
     flex-direction: column;
