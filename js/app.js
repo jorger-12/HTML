@@ -70,6 +70,15 @@ function revealOnScroll() {
     }
   });
 }
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.onload = function () {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
+};
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
