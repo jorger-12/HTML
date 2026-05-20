@@ -19,18 +19,22 @@ exports.syncConsultationToSheet = onDocumentCreated(
 
       await sheets.spreadsheets.values.append({
         spreadsheetId: SHEET_ID,
-        range: "Sheet1!A:G",
+        range: "Sheet1!A:I",
         valueInputOption: "USER_ENTERED",
         requestBody: {
           values: [
             [
-              new Date().toLocaleString(),
+              new Date().toLocaleString("en-US", {
+                timeZone: "America/Denver",
+              }),
               lead.name || "",
               lead.email || "",
               lead.phone || "",
               lead.company || "",
               lead.service || "",
               lead.project || "",
+              "NEW",
+              "",
             ],
           ],
         },

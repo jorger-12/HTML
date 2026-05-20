@@ -722,6 +722,11 @@
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
 
       import {
+        initializeAppCheck,
+        ReCaptchaV3Provider,
+      } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app-check.js";
+
+      import {
         getFirestore,
         collection,
         addDoc,
@@ -739,6 +744,14 @@
       };
 
       const app = initializeApp(firebaseConfig);
+
+      initializeAppCheck(app, {
+        provider: new ReCaptchaV3Provider(
+          "6Lc4lfQsAAAAAO1azA6mvfioB5AvLsdx3TS78bEa",
+        ),
+        isTokenAutoRefreshEnabled: true,
+      });
+
       const db = getFirestore(app);
 
       const form = document.getElementById("consultationForm");
