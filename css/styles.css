@@ -96,16 +96,17 @@ nav.hide {
   margin: 4px 0;
 }
 
-/* MOBILE MENU */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
+
+  background: #050505;
 
   transform: translateX(100%);
   transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -128,7 +129,7 @@ nav.hide {
 }
 
 .menu-logo {
-  height: 50px;
+  height: 75px;
 }
 
 /* GOLD X */
@@ -143,15 +144,25 @@ nav.hide {
   line-height: 1;
 }
 
-/* DIVIDER */
 .menu-divider {
-  height: 2px;
-  background: linear-gradient(to right, #e4c376, #000);
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(228, 195, 118, 0.65),
+    transparent
+  );
 }
 
-/* GOLD BODY */
 .menu-body {
-  background: #e4c376;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.42)),
+    url("../images/SKhbackground.png");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -165,24 +176,49 @@ nav.hide {
 
 .menu-links li {
   list-style: none;
-  padding: 15px 0;
-  border-bottom: 1px solid black;
+  padding: 18px 0;
+  position: relative;
+
   font-size: 16px;
-  color: black;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e4c376;
   cursor: pointer;
 }
 
+.menu-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(228, 195, 118, 0.75),
+    rgba(228, 195, 118, 0.35),
+    transparent
+  );
+}
 /* CTA */
 
 .mobile-cta {
   background: #000;
+  border: 1px solid rgba(228, 195, 118, 0.45);
+
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 15px 18px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
   color: #e4c376;
-  margin: 15px;
-  border-radius: 25px;
+
+  margin: 24px 18px 34px;
+  border-radius: 999px;
 }
 
 /* OVERLAY */
