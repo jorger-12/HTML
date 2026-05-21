@@ -795,8 +795,11 @@
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
 
-    font-size: 13px;
+    font-size: 16px;
     outline: none;
+
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   .mobile-contact-form input::placeholder,
