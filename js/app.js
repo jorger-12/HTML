@@ -79,6 +79,40 @@ window.onload = function () {
     window.scrollTo(0, 0);
   }, 0);
 };
+const customSelects = document.querySelectorAll(".custom-select");
+
+customSelects.forEach((customSelect) => {
+  const trigger = customSelect.querySelector(".custom-select-trigger");
+  const triggerText = trigger.querySelector("span:first-child");
+  const options = customSelect.querySelectorAll(".custom-option");
+  const hiddenInput = customSelect.querySelector('input[type="hidden"]');
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    customSelects.forEach((select) => {
+      if (select !== customSelect) {
+        select.classList.remove("active");
+      }
+    });
+
+    customSelect.classList.toggle("active");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      triggerText.textContent = option.textContent.trim();
+      hiddenInput.value = option.dataset.value;
+      customSelect.classList.remove("active");
+    });
+  });
+});
+
+document.addEventListener("click", () => {
+  customSelects.forEach((select) => {
+    select.classList.remove("active");
+  });
+});
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
