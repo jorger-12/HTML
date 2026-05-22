@@ -806,19 +806,25 @@ nav.hide {
   align-items: center;
 }
 
-.desktop-consultation-content {
-  width: 100%;
-  max-width: 1380px;
+.desktop-consultation-shell {
+  width: min(100%, 1320px);
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 520px 620px;
-  justify-content: center;
-  gap: 70px;
+  grid-template-columns:
+    clamp(360px, 32vw, 460px)
+    clamp(360px, 30vw, 400px);
+  gap: clamp(12px, 2vw, 28px);
+
   align-items: center;
+  justify-content: end;
+
+  padding-right: 0;
+  transform: translateX(clamp(40px, 7vw, 40px));
 }
 .desktop-consultation-copy {
-  max-width: 500px;
+  width: clamp(360px, 32vw, 460px);
+  max-width: clamp(360px, 32vw, 460px);
   position: relative;
   z-index: 2;
 
@@ -831,8 +837,6 @@ nav.hide {
   box-shadow: none;
   border-radius: 0;
   overflow: visible;
-
-  transform: translateX(300px);
 }
 
 .desktop-consultation-copy .desktop-label {
@@ -846,7 +850,7 @@ nav.hide {
 
 .desktop-consultation-copy h2 {
   color: #111;
-  font-size: clamp(42px, 3.6vw, 62px);
+  font-size: clamp(38px, 3.2vw, 54px);
   line-height: 1.02;
   margin-bottom: 20px;
   font-weight: 800;
@@ -874,12 +878,13 @@ nav.hide {
   );
 }
 .desktop-consultation-intro {
-  color: rgba(17, 17, 17, 0.72);
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 420px;
-  margin-bottom: 28px;
+  color: rgba(17, 17, 17, 0.68);
+  font-size: 16px;
+  line-height: 1.75;
   font-weight: 400;
+  max-width: 470px;
+  margin-bottom: 24px;
+  letter-spacing: -0.15px;
 }
 
 .desktop-benefits {
@@ -892,33 +897,39 @@ nav.hide {
 }
 
 .desktop-benefits li {
+  position: relative;
+
+  color: rgba(17, 17, 17, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 12px 8px 18px; /* slightly less padding */
+  border-radius: 12px;
+
+  background: rgba(255, 250, 238, 0.05); /* subtle premium highlight */
+  border: 1px solid rgba(228, 195, 118, 0.12);
+
   display: flex;
   align-items: center;
-  gap: 16px;
-
-  padding: 0;
-  border: none;
-  background: none;
-  box-shadow: none;
-  backdrop-filter: none;
-
-  color: #111;
+  gap: 10px;
 }
 .desktop-benefits li .benefit-icon {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
-
-  border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(159, 123, 50, 0.08);
-  border: 1px solid rgba(159, 123, 50, 0.18);
+  border-radius: 50%;
 
-  box-shadow: none;
+  background: rgba(159, 123, 50, 0.06);
+  border: 1px solid rgba(159, 123, 50, 0.14);
+
+  color: #9f7b32;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .desktop-benefits li span:last-child {
@@ -932,14 +943,13 @@ nav.hide {
 .desktop-consultation-form-wrap {
   justify-self: end;
   min-height: 470px;
-  margin-right: 20px;
+  margin-right: 0;
 
   padding: 42px 38px;
 
   border-radius: 34px;
 
   background: rgba(10, 10, 10, 0.78);
-
   border: 1px solid rgba(228, 195, 118, 0.16);
 
   backdrop-filter: blur(20px);
@@ -968,13 +978,12 @@ nav.hide {
 .desktop-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 10px 14px;
 }
-
 .desktop-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .desktop-contact-form input,
@@ -997,24 +1006,7 @@ nav.hide {
 .desktop-contact-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.55);
 }
-.desktop-contact-form select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 
-  cursor: pointer;
-
-  background:
-    linear-gradient(45deg, transparent 50%, #9f7b32 50%),
-    linear-gradient(135deg, #9f7b32 50%, transparent 50%);
-
-  background-position:
-    calc(100% - 16px) calc(50% - 2px),
-    calc(100% - 10px) calc(50% - 2px);
-
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
-}
 .desktop-contact-form select option {
   background: #111;
   color: #ffffff;
@@ -1071,17 +1063,26 @@ nav.hide {
 
 .custom-options {
   display: none;
+
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 10px);
   left: 0;
   right: 0;
 
-  background: rgba(10, 10, 10, 0.96);
-  border: 1px solid rgba(228, 195, 118, 0.24);
-  border-radius: 14px;
+  background: rgba(8, 8, 8, 0.96);
+
+  border: 1px solid rgba(228, 195, 118, 0.18);
+  border-radius: 18px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.42),
+    0 0 16px rgba(228, 195, 118, 0.04);
 
   overflow: hidden;
-  z-index: 50;
+  z-index: 200;
 }
 
 .custom-select.active .custom-options {
@@ -1089,15 +1090,23 @@ nav.hide {
 }
 
 .custom-option {
-  padding: 14px 16px;
+  padding: 16px 20px;
+
   color: rgba(255, 255, 255, 0.78);
   font-size: 14px;
+  font-weight: 500;
+
   cursor: pointer;
+
+  border-bottom: 1px solid rgba(228, 195, 118, 0.06);
+
+  transition: all 0.22s ease;
 }
 
 .custom-option:hover {
-  background: rgba(228, 195, 118, 0.12);
+  background: rgba(228, 195, 118, 0.08);
   color: #e4c376;
+  padding-left: 26px;
 }
 
 .desktop-contact-form textarea {
@@ -1114,33 +1123,33 @@ nav.hide {
 }
 
 .desktop-contact-form button {
-  margin-top: 16px;
-  padding: 18px;
+  margin-top: 10px;
+  padding: 17px 22px;
 
   border: none;
-  border-radius: 14px;
+  border-radius: 999px;
 
-  background: linear-gradient(145deg, #111, #1f1f1f);
+  background: linear-gradient(145deg, #f3d891, #d4a63b);
 
-  color: #e4c376;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
+  color: #000;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-transform: uppercase;
 
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-
   cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(212, 166, 59, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
   transition: all 0.25s ease;
 }
 .desktop-contact-form button:hover {
   transform: translateY(-2px);
-
   box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 16px 32px rgba(212, 166, 59, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
 .desktop-contact-form small {
