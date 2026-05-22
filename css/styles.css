@@ -1029,26 +1029,44 @@ nav.hide {
 
 .custom-select-trigger {
   width: 100%;
-  padding: 14px 4px;
+  height: 60px;
+  padding: 0 18px 0 22px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border: none;
-  border-bottom: 1px solid rgba(228, 195, 118, 0.38);
-
   background: transparent;
-  color: rgba(255, 255, 255, 0.72);
+  border: none;
+  border-bottom: 1px solid rgba(228, 195, 118, 0.32);
 
-  font-size: 14px;
-  font-weight: 500;
+  color: #e4c376;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
   cursor: pointer;
 }
 
 .custom-arrow {
-  color: #e4c376;
-  font-size: 18px;
+  width: auto;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  background: none;
+  border: none;
+  border-radius: 0;
+
+  position: relative;
+}
+.custom-select.active .custom-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
 }
 
 .custom-options {
