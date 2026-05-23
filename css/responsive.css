@@ -7,6 +7,7 @@
   .desktop-services,
   .desktop-results,
   .desktop-consultation,
+  .consultation-footer-bg,
   .desktop-footer {
     display: none !important;
   }
