@@ -63,14 +63,10 @@
   <body>
     <nav>
       <ul class="nav-menu">
-        <li class="active">HOME</li>
-        <li>ABOUT US</li>
-        <li>SERVICES</li>
-        <li>INDUSTRIES</li>
-        <li>CONTACT</li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#desktop-contact">CONTACT</a></li>
       </ul>
-
-      <a href="#contact" class="nav-btn">📅 SCHEDULE CONSULTATION</a>
 
       <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -90,11 +86,10 @@
 
       <div class="menu-body">
         <ul class="menu-links">
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>SERVICES</li>
-          <li>INDUSTRIES</li>
-          <li>CONTACT</li>
+          <li><a href="#" onclick="closeMenu()">HOME</a></li>
+          <li><a href="#services" onclick="closeMenu()">SERVICES</a></li>
+          <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+          <li><a href="#desktop-contact" onclick="closeMenu()">CONTACT</a></li>
         </ul>
 
         <div
@@ -439,14 +434,14 @@
     </main>
 
     <section class="hero">
-      <div class="hero-brand">
+      <a href="#" class="hero-brand">
         <img src="images/SKlogo4.png" alt="SK Logo" class="hero-logo-main" />
         <img
           src="images/SKlogo3.png"
           alt="SK International"
           class="hero-logo-text"
         />
-      </div>
+      </a>
 
       <div class="hero-text">
         <div class="hero-title">
@@ -511,7 +506,7 @@
       </div>
     </section>
 
-    <section class="desktop-services">
+    <section class="desktop-services" id="services">
       <p class="desktop-label">OUR SERVICES</p>
 
       <h2>
