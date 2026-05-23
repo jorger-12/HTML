@@ -921,7 +921,9 @@
 
       const desktopForm = document.getElementById("desktopConsultationForm");
       const desktopFormMessage = document.getElementById("desktopFormMessage");
-      const desktopSubmitButton = desktopForm.querySelector("button");
+      const desktopSubmitButton = desktopForm.querySelector(
+        'button[type="submit"]',
+      );
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
