@@ -989,6 +989,10 @@
           });
 
           desktopForm.reset();
+          const desktopTrigger = desktopForm.querySelector(
+            ".custom-select-trigger span:first-child",
+          );
+          desktopTrigger.textContent = "SERVICE OF INTEREST";
 
           desktopSubmitButton.textContent = "REQUEST RECEIVED";
           desktopFormMessage.textContent =
