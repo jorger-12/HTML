@@ -194,6 +194,39 @@
           </div>
         </div>
       </section>
+
+      <!-- MOBILE SERVICE MODAL -->
+      <div class="mobile-service-modal-overlay" id="mobileServiceModal">
+        <div class="mobile-service-modal">
+          <button
+            class="mobile-service-close"
+            onclick="closeMobileServiceModal()"
+          >
+            ×
+          </button>
+
+          <img id="mobileModalIcon" src="" alt="" />
+
+          <h3 id="mobileModalTitle"></h3>
+
+          <span class="mobile-modal-line"></span>
+
+          <p id="mobileModalDescription"></p>
+
+          <h4>WHAT’S INCLUDED</h4>
+
+          <ul id="mobileModalList"></ul>
+
+          <div class="mobile-service-footer">
+            <button onclick="changeMobileService(-1)">←</button>
+
+            <div class="mobile-modal-dots" id="mobileModalDots"></div>
+
+            <button onclick="changeMobileService(1)">→</button>
+          </div>
+        </div>
+      </div>
+
       <section class="mobile-process reveal">
         <div class="mobile-label">OUR PROCESS</div>
         <h2>A Strategic Framework Built For Measurable Growth</h2>
@@ -588,6 +621,51 @@
         </div>
       </div>
     </section>
+
+    <!-- DESKTOP SERVICE MODAL -->
+    <div class="service-modal-overlay" id="serviceModal">
+      <div class="service-modal">
+        <button class="service-modal-close" onclick="closeServiceModal()">
+          ×
+        </button>
+
+        <div class="service-modal-body">
+          <div class="service-modal-left">
+            <img id="modalServiceIcon" src="" alt="" />
+            <h3 id="modalServiceTitle"></h3>
+            <span></span>
+            <p id="modalServiceDescription"></p>
+          </div>
+
+          <div class="service-modal-divider"></div>
+
+          <div class="service-modal-right">
+            <h4>WHAT’S INCLUDED</h4>
+            <ul id="modalServiceList"></ul>
+          </div>
+        </div>
+
+        <div class="service-modal-footer">
+          <button onclick="changeService(-1)" class="modal-nav-btn">←</button>
+
+          <div class="modal-prev">
+            <strong>PREVIOUS</strong>
+            <small id="modalPrevName"></small>
+          </div>
+
+          <div class="modal-dots" id="modalDots"></div>
+
+          <div class="modal-count" id="modalCount"></div>
+
+          <div class="modal-next">
+            <strong>NEXT</strong>
+            <small id="modalNextName"></small>
+          </div>
+
+          <button onclick="changeService(1)" class="modal-nav-btn">→</button>
+        </div>
+      </div>
+    </div>
 
     <section class="desktop-about" id="about">
       <div class="desktop-about-card">
