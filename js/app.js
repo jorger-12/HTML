@@ -329,5 +329,27 @@ mobileModal.addEventListener("click", (e) => {
   }
 });
 
+/* SOLUTIONS NAV DROPDOWN */
+
+function toggleSolutionsDropdown(event) {
+  event.stopPropagation();
+
+  const dropdown = event.currentTarget.closest(".nav-dropdown");
+
+  document.querySelectorAll(".nav-dropdown").forEach((item) => {
+    if (item !== dropdown) {
+      item.classList.remove("open");
+    }
+  });
+
+  dropdown.classList.toggle("open");
+}
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".nav-dropdown").forEach((item) => {
+    item.classList.remove("open");
+  });
+});
+
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
