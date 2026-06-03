@@ -57,15 +57,46 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/solutions.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
   <body>
     <nav>
       <ul class="nav-menu">
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#desktop-contact">CONTACT</a></li>
+        <!-- HOME -->
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+
+        <!-- SERVICES DROPDOWN -->
+        <li class="nav-dropdown">
+          <button
+            type="button"
+            class="nav-dropdown-trigger"
+            onclick="toggleSolutionsDropdown(event)"
+          >
+            SERVICES ▾
+          </button>
+
+          <div class="nav-dropdown-menu">
+            <a href="#website-development">Website Development</a>
+            <a href="#website-addons">Website Add-Ons</a>
+            <a href="#care-plans">Monthly Care Plans</a>
+            <a href="#solutions-section">Business Solutions</a>
+            <a href="#growth-services">Growth Services</a>
+          </div>
+        </li>
+
+        <!-- ABOUT -->
+        <li>
+          <a href="index.html#about">ABOUT</a>
+        </li>
+
+        <!-- CONTACT -->
+        <li>
+          <a href="index.html#desktop-contact">CONTACT</a>
+        </li>
       </ul>
 
       <div class="hamburger" onclick="toggleMenu()">
@@ -75,7 +106,7 @@
       </div>
     </nav>
 
-    <section class="hero">
+    <section class="solutions-visual-hero">
       <a href="#" class="hero-brand">
         <img src="images/SKlogo4.png" alt="SK Logo" class="hero-logo-main" />
         <img
@@ -84,24 +115,19 @@
           class="hero-logo-text"
         />
       </a>
+    </section>
 
-      <div class="hero-text">
-        <div class="hero-title">
-          SMARTER BUSINESS<br />
-          SOLUTIONS
-        </div>
+    <section class="solutions-hero-copy">
+      <div class="hero-title">SMARTER BUSINESS SOLUTIONS</div>
 
-        <div class="hero-sub">
-          AUTOMATION • LEAD MANAGEMENT • BUSINESS TOOLS
-        </div>
+      <div class="hero-sub">AUTOMATION • LEAD MANAGEMENT • BUSINESS TOOLS</div>
 
-        <div class="hero-desc">
-          Streamline operations, capture opportunities, and implement smarter
-          digital systems built to support business growth.
-        </div>
-
-        <a href="#solutions-section" class="nav-btn"> EXPLORE SOLUTIONS </a>
+      <div class="hero-desc">
+        Streamline operations, capture opportunities, and implement smarter
+        digital systems built to support business growth.
       </div>
+
+      <a href="#solutions-section" class="nav-btn">EXPLORE SOLUTIONS</a>
     </section>
 
     <div class="website-suite-card">
@@ -120,143 +146,534 @@
 
         <div class="website-pricing-grid">
           <div class="website-package-card">
-            <span class="package-tag">1 PAGE</span>
-            <h3>Launch</h3>
-            <p class="package-price">Starting at $295–$495</p>
+            <span class="package-tag">Launch Experience</span>
+            <h3>Foundation</h3>
+            <p class="package-price">
+              <span class="package-price-label">Starting at</span>
+              $295
+            </p>
             <p class="package-desc">
               Best for startups, simple businesses, and digital business-card
               style websites.
             </p>
-            <ul>
-              <li>1 static page</li>
-              <li>Mobile-friendly layout</li>
-              <li>Contact information display</li>
-              <li>Social media links</li>
-              <li>Basic SEO setup</li>
-              <li>Domain connection</li>
-              <li>1 revision</li>
-            </ul>
+            <a href="#" class="package-cta" data-package="foundation"
+              >Explore Package</a
+            >
           </div>
 
           <div class="website-package-card featured-package">
-            <span class="package-tag">UP TO 2 PAGES</span>
-            <h3>Growth</h3>
-            <p class="package-price">Starting at $1,000+</p>
+            <span class="popular-badge">MOST POPULAR</span>
+            <span class="package-tag">Growth Experience</span>
+            <h3>Expansion</h3>
+            <p class="package-price">
+              <span class="package-price-label">Starting at</span>
+              $1,000+
+            </p>
             <p class="package-desc">
               Best for businesses that need a stronger online presence and more
               credibility.
             </p>
-            <ul>
-              <li>Up to 2 pages</li>
-              <li>Stronger custom layout</li>
-              <li>Improved visual polish</li>
-              <li>Light motion effects</li>
-              <li>Basic SEO setup</li>
-              <li>Domain connection</li>
-              <li>2 revisions</li>
-            </ul>
+            <a href="#" class="package-cta" data-package="expansion"
+              >Explore Package</a
+            >
           </div>
 
           <div class="website-package-card">
-            <span class="package-tag">3–5 PAGES</span>
-            <h3>Premium</h3>
-            <p class="package-price">Starting at $2,500+</p>
+            <span class="package-tag">Executive Experience</span>
+            <h3>Signature</h3>
+            <p class="package-price">
+              <span class="package-price-label">Starting at</span>
+              $2,500+
+            </p>
             <p class="package-desc">
               Best for established businesses needing a polished multi-page
               brand experience.
             </p>
-            <ul>
-              <li>3–5 pages</li>
-              <li>Premium custom design</li>
-              <li>Stronger user experience</li>
-              <li>Advanced page layouts</li>
-              <li>Refined motion effects</li>
-              <li>Basic SEO setup</li>
-              <li>3 revisions</li>
-            </ul>
+            <a href="#" class="package-cta" data-package="signature"
+              >Explore Package</a
+            >
           </div>
 
           <div class="website-package-card">
-            <span class="package-tag">5+ PAGES</span>
+            <span class="package-tag">Custom Digital Build</span>
             <h3>Bespoke</h3>
-            <p class="package-price">Request Quote</p>
+            <p class="package-price">
+              <span class="package-price-label">Request</span>
+              Custom Quote
+            </p>
             <p class="package-desc">
               Best for larger brands, complex websites, and fully tailored
               digital builds.
             </p>
-            <ul>
-              <li>Custom website scope</li>
-              <li>Advanced design direction</li>
-              <li>Expanded page structure</li>
-              <li>Strategy-based planning</li>
-              <li>Custom quote based on needs</li>
-            </ul>
+            <a href="#" class="package-cta" data-package="bespoke"
+              >Explore Package</a
+            >
           </div>
         </div>
       </section>
+      <!-- PACKAGE MODAL -->
+      <div class="package-modal-overlay" id="packageModal">
+        <div class="package-modal">
+          <button class="package-modal-close" onclick="closePackageModal()">
+            ×
+          </button>
+
+          <div class="package-modal-top">
+            <div>
+              <p class="package-modal-label" id="modalLabel">PACKAGE</p>
+              <div class="package-modal-title-row">
+                <h3 id="modalTitle">Package Title</h3>
+                <span class="modal-title-separator">—</span>
+                <p class="package-modal-price" id="modalPrice">Price</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-modal-panels">
+            <div class="modal-info-card">
+              <h4>Included</h4>
+              <ul id="modalIncludes"></ul>
+
+              <div class="modal-divider"></div>
+
+              <h4>Typical Timeline</h4>
+              <p id="modalTimeline"></p>
+            </div>
+
+            <div class="modal-info-card">
+              <h4>Best For</h4>
+              <ul id="modalBestFor"></ul>
+
+              <div class="modal-divider"></div>
+
+              <h4>Popular Upgrades</h4>
+              <ul id="modalUpgrades"></ul>
+            </div>
+          </div>
+
+          <div class="package-modal-footer">
+            <button
+              class="modal-nav-control"
+              onclick="changePackage(-1)"
+              id="modalPrevBtn"
+            >
+              ← Previous
+            </button>
+
+            <div class="modal-center-action">
+              <a href="index.html#desktop-contact" class="package-modal-cta"
+                >Start This Build</a
+              >
+              >
+              <div class="package-modal-count" id="modalCount"></div>
+            </div>
+
+            <button
+              class="modal-nav-control"
+              onclick="changePackage(1)"
+              id="modalNextBtn"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="website-process-section">
+        <div class="website-process-strip">
+          <div class="website-process-top">
+            <div class="website-flow-step">
+              <div class="website-step-number"></div>
+              <h3>Choose Package</h3>
+              <p>Select the website option that fits your goals.</p>
+            </div>
+
+            <div class="website-flow-arrow">→</div>
+
+            <div class="website-flow-step">
+              <div class="website-step-number"></div>
+              <h3>Scope & Quote</h3>
+              <p>Confirm features, timeline, and project direction.</p>
+            </div>
+
+            <div class="website-flow-arrow">→</div>
+
+            <div class="website-flow-step">
+              <div class="website-step-number"></div>
+              <h3>Strategy Call</h3>
+              <p>Align on content, priorities, and customer experience.</p>
+            </div>
+
+            <div class="website-flow-arrow">→</div>
+
+            <div class="website-flow-step">
+              <div class="website-step-number"></div>
+              <h3>Design & Build</h3>
+              <p>Your website is built with close communication.</p>
+            </div>
+
+            <div class="website-flow-arrow">→</div>
+
+            <div class="website-flow-step">
+              <div class="website-step-number"></div>
+              <h3>Launch</h3>
+              <p>Final review, deployment, and optional support.</p>
+            </div>
+          </div>
+
+          <div class="website-process-footer">
+            Clear communication throughout the entire build process.
+          </div>
+        </div>
+      </section>
+
+      <p class="desktop-label">WEBSITE ADD-ONS</p>
+
+      <h2>Customize Your Website Build</h2>
+
+      <p class="website-addons-intro">
+        Powerful add-ons designed to improve customer experience, automate your
+        workflow, strengthen your brand, and give your business better digital
+        tools.
+      </p>
 
       <section class="website-addons-section" id="website-addons">
-        <p class="desktop-label">OPTIONAL ADD-ONS</p>
-
-        <h2>Customize Your Website Build</h2>
-
-        <p class="website-addons-intro">
-          Add only the features your business actually needs. This keeps your
-          website investment flexible while allowing room to scale.
-        </p>
-
-        <div class="website-addons-grid">
-          <div class="addon-card">
-            <h3>Basic Contact Form</h3>
-            <p class="addon-price">+$150–250</p>
-            <p>Simple customer inquiry form with email notifications.</p>
+        <div class="addons-section-headings">
+          <div class="addons-heading-card addons-heading-left">
+            <h3>Premium Features</h3>
           </div>
 
-          <div class="addon-card">
-            <h3>Advanced Quote Form</h3>
-            <p class="addon-price">+$500–750+</p>
-            <p>
-              Structured intake forms for project requests and lead capture.
-            </p>
+          <div class="addons-heading-card addons-heading-right">
+            <h3>Essential Enhancements</h3>
+          </div>
+        </div>
+
+        <div class="featured-addons-list">
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="quote">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Advanced Quote Form</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price">$500+</span>
+                  </div>
+                </div>
+
+                <p>
+                  Smart intake forms that capture the right information and
+                  qualify leads instantly.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>Basic Contact Form</h4>
+
+                <p>Simple inquiry form with email notifications.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+
+                  <strong> $150+ </strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Review Integration</h4>
+
+                <p>Display Google reviews and build trust with visitors.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+
+                  <strong> $150+ </strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="addon-card">
-            <h3>Appointment Booking</h3>
-            <p class="addon-price">+$500+</p>
-            <p>Allow customers to request or schedule appointments online.</p>
+          <!-- ROW 2 -->
+
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="booking">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Appointment Booking</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price">$500+</span>
+                  </div>
+                </div>
+
+                <p>
+                  Allow customers to request or schedule appointments online
+                  with less manual coordination.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>Google Maps</h4>
+                <p>Help customers quickly find your business location.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$75+</strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Live Chat</h4>
+                <p>Engage visitors instantly with real-time messaging.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$200+</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="addon-card">
-            <h3>Lead Tracking</h3>
-            <p class="addon-price">+$250–500+</p>
-            <p>Organize and monitor incoming customer opportunities.</p>
+          <!-- ROW 3 -->
+
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="leads">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Lead Management Dashboard</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price">$250+</span>
+                  </div>
+                </div>
+
+                <p>
+                  Organize inquiries, follow-ups, and customer opportunities in
+                  one clean system.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>Analytics Reports</h4>
+                <p>Track visitor behavior and conversion performance.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$250+</strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Auto Follow-Up</h4>
+                <p>Send reminders and automated customer follow-ups.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$400+</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="addon-card">
-            <h3>Payment Integration</h3>
-            <p class="addon-price">+$500+</p>
-            <p>Accept customer payments through your website.</p>
+          <!-- ROW 4 -->
+
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="payments">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Payment Integration</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price">$500+</span>
+                  </div>
+                </div>
+
+                <p>
+                  Accept deposits, invoices, and customer payments directly
+                  through your website.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>FAQ Section</h4>
+                <p>Answer common customer questions directly on-site.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$200+</strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Extra Pages</h4>
+                <p>Expand your website with additional service pages.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$200+</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="addon-card">
-            <h3>Extra Pages</h3>
-            <p class="addon-price">+$200–400/page</p>
-            <p>Expand your website beyond the included package structure.</p>
+          <!-- ROW 5 -->
+
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="portal">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Client Portal</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price">$1,000+</span>
+                  </div>
+                </div>
+
+                <p>
+                  Give customers a secure place to view updates, documents,
+                  invoices, and project details.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>SEO Optimization</h4>
+                <p>Improve rankings and website discoverability.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$300+</strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Blog Setup</h4>
+                <p>Create SEO-focused content publishing sections.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$250+</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="addon-card">
-            <h3>Premium Motion Effects</h3>
-            <p class="addon-price">+$250–750+</p>
-            <p>Elevated animations and premium visual interactions.</p>
-          </div>
+          <!-- ROW 6 -->
 
-          <div class="addon-card">
-            <h3>Custom Features</h3>
-            <p class="addon-price">Custom Quote</p>
-            <p>Specialized functionality built around your business needs.</p>
+          <div class="addon-hybrid-row">
+            <div class="addon-row-card" data-addon="automation">
+              <div class="addon-row-copy">
+                <div class="addon-row-top">
+                  <h3>Workflow Automation</h3>
+
+                  <div class="addon-price-group">
+                    <span class="addon-starting-at">Starting At</span>
+                    <span class="addon-row-price"> Custom<br />Quote </span>
+                  </div>
+                </div>
+
+                <p>
+                  Automate follow-ups, reminders, notifications, and internal
+                  business tasks.
+                </p>
+              </div>
+
+              <div class="addon-actions">
+                <button class="addon-example-btn">View Example</button>
+              </div>
+            </div>
+
+            <div class="addon-side-stack">
+              <div class="addon-mini-card">
+                <h4>Multi-Location</h4>
+                <p>Manage multiple service areas and business locations.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong>$500+</strong>
+                </div>
+              </div>
+
+              <div class="addon-mini-card">
+                <h4>Copywriting</h4>
+                <p>Professional website writing tailored to conversions.</p>
+                <div class="mini-price-box">
+                  <span class="mini-starting-at"> Starting At </span>
+                  <strong> $150+ </strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <!-- ADD-ON EXAMPLE MODAL -->
+      <div class="addon-modal-overlay" id="addonModal">
+        <div class="addon-modal">
+          <button class="addon-modal-close" id="addonModalClose">×</button>
+
+          <div class="addon-modal-header">
+            <div class="addon-modal-title-content">
+              <p id="addonModalLabel">Premium Add-On</p>
+
+              <h3 id="addonModalTitle">Advanced Quote Form</h3>
+
+              <span id="addonModalPrice">$500 – $750+</span>
+            </div>
+
+            <div class="addon-modal-info-card">
+              <h4>System Highlights</h4>
+
+              <ul id="addonModalInfo"></ul>
+            </div>
+          </div>
+
+          <div class="addon-modal-preview" id="addonModalPreview">
+            <!-- JS will place mockup here -->
+          </div>
+
+          <div class="addon-modal-footer">
+            <button class="addon-modal-nav" id="addonPrevBtn">
+              ← Previous Add-On
+            </button>
+
+            <div class="addon-modal-center">
+              <a href="index.html#desktop-contact" class="addon-modal-cta"
+                >Discuss This Feature</a
+              >
+
+              <div class="addon-progress-track">
+                <div class="addon-progress-fill" id="addonProgressFill"></div>
+              </div>
+            </div>
+
+            <button class="addon-modal-nav" id="addonNextBtn">
+              Next Add-On →
+            </button>
+          </div>
+        </div>
+      </div>
 
       <section class="website-care-section" id="care-plans">
         <p class="desktop-label">ONGOING WEBSITE CARE</p>
@@ -294,6 +711,7 @@
           </div>
 
           <div class="care-plan-card featured-package">
+            <div class="popular-badge">Most Popular</div>
             <h3>Growth</h3>
             <p class="care-price">$99/month</p>
             <ul>
@@ -318,211 +736,218 @@
       </section>
     </div>
 
-    <div class="business-suite-card">
-      <section class="solutions-overview" id="solutions-section">
-        <p class="desktop-label">BUSINESS SOLUTIONS</p>
+    <div class="solutions-content-wrapper">
+      <div class="business-suite-card">
+        <section class="solutions-overview" id="solutions-section">
+          <p class="desktop-label">BUSINESS SOLUTIONS</p>
 
-        <h2>
-          Smarter Systems For<br />
-          Modern Businesses
-        </h2>
+          <h2>
+            Smarter Systems For<br />
+            Modern Businesses
+          </h2>
 
-        <p class="solutions-intro">
-          Digital solutions designed to improve efficiency, simplify operations,
-          and help businesses capture more opportunities with confidence.
-        </p>
+          <p class="solutions-intro">
+            Digital solutions designed to improve efficiency, simplify
+            operations, and help businesses capture more opportunities with
+            confidence.
+          </p>
 
-        <div class="solutions-card-grid">
-          <div class="solution-service-card">
-            <h3>Lead Management</h3>
-            <p class="solution-price">Starting at $250+</p>
-            <p>
-              Organize customer inquiries, improve follow-up, and reduce missed
-              opportunities.
-            </p>
+          <div class="solutions-card-grid">
+            <div class="solution-service-card">
+              <h3>Lead Management</h3>
+              <p class="solution-price">Starting at $250+</p>
+              <p>
+                Organize customer inquiries, improve follow-up, and reduce
+                missed opportunities.
+              </p>
+            </div>
+
+            <div class="solution-service-card">
+              <h3>Appointment Booking</h3>
+              <p class="solution-price">Starting at $500+</p>
+              <p>
+                Let customers request or schedule appointments with less manual
+                coordination.
+              </p>
+            </div>
+
+            <div class="solution-service-card">
+              <h3>Workflow Automation</h3>
+              <p class="solution-price">Custom Quote</p>
+              <p>Reduce repetitive work and streamline business operations.</p>
+            </div>
+
+            <div class="solution-service-card">
+              <h3>Business Dashboards</h3>
+              <p class="solution-price">Custom Quote</p>
+              <p>View important business information in one organized place.</p>
+            </div>
+
+            <div class="solution-service-card">
+              <h3>Administrative Tools</h3>
+              <p class="solution-price">Custom Quote</p>
+              <p>Internal management tools designed around your workflow.</p>
+            </div>
+
+            <div class="solution-service-card">
+              <h3>Custom Solutions</h3>
+              <p class="solution-price">Request Consultation</p>
+              <p>
+                Tailored digital solutions built specifically for your business
+                needs.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="solution-service-card">
-            <h3>Appointment Booking</h3>
-            <p class="solution-price">Starting at $500+</p>
-            <p>
-              Let customers request or schedule appointments with less manual
-              coordination.
-            </p>
+        <section class="growth-services-section" id="growth-services">
+          <p class="desktop-label">GROWTH SERVICES</p>
+
+          <h2>Support Beyond Design And Systems</h2>
+
+          <p class="growth-services-intro">
+            For businesses looking to improve visibility, performance, and
+            strategic growth.
+          </p>
+
+          <div class="growth-services-grid">
+            <div class="growth-service-card">
+              <h3>SEO Setup</h3>
+              <p class="growth-price">Starting at $300+</p>
+              <p>
+                Foundational search visibility improvements for better online
+                discoverability.
+              </p>
+            </div>
+
+            <div class="growth-service-card">
+              <h3>Analytics & Reporting</h3>
+              <p class="growth-price">Starting at $300+</p>
+              <p>
+                Better visibility into website performance and customer
+                activity.
+              </p>
+            </div>
+
+            <div class="growth-service-card">
+              <h3>Performance Optimization</h3>
+              <p class="growth-price">Starting at $500+</p>
+              <p>Improve website speed, user experience, and performance.</p>
+            </div>
+
+            <div class="growth-service-card">
+              <h3>Conversion Optimization</h3>
+              <p class="growth-price">Custom Quote</p>
+              <p>
+                Improve how effectively your website turns visitors into
+                opportunities.
+              </p>
+            </div>
+
+            <div class="growth-service-card">
+              <h3>Strategy Consulting</h3>
+              <p class="growth-price">Consultation Based</p>
+              <p>Business-focused strategic guidance tailored to your goals.</p>
+            </div>
+
+            <div class="growth-service-card">
+              <h3>Custom Growth Solutions</h3>
+              <p class="growth-price">Request Consultation</p>
+              <p>
+                Flexible support for businesses pursuing long-term digital
+                growth.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="solution-service-card">
-            <h3>Workflow Automation</h3>
-            <p class="solution-price">Custom Quote</p>
-            <p>Reduce repetitive work and streamline business operations.</p>
+        <section class="solutions-benefits-section">
+          <p class="desktop-label">WHY IT MATTERS</p>
+
+          <h2>Better Systems Create Better Business Outcomes</h2>
+
+          <div class="solutions-benefits-grid">
+            <div class="benefit-card">
+              <h3>Save Time</h3>
+              <p>
+                Reduce repetitive tasks and free up valuable time for
+                higher-priority work.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <h3>Respond Faster</h3>
+              <p>
+                Faster inquiry handling and better customer response times can
+                improve conversions.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <h3>Stay Organized</h3>
+              <p>
+                Keep important business activity, customer requests, and
+                processes structured and easy to manage.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <h3>Improve Efficiency</h3>
+              <p>
+                Smarter workflows help businesses operate more consistently and
+                with fewer manual errors.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="solution-service-card">
-            <h3>Business Dashboards</h3>
-            <p class="solution-price">Custom Quote</p>
-            <p>View important business information in one organized place.</p>
+        <section class="solutions-process-section">
+          <p class="desktop-label">HOW IT WORKS</p>
+
+          <h2>A Simple Process Built Around Your Business</h2>
+
+          <div class="solutions-process-grid">
+            <div class="process-step-card">
+              <span>01</span>
+              <h3>Consult</h3>
+              <p>
+                We learn how your business operates and where support is needed.
+              </p>
+            </div>
+
+            <div class="process-step-card">
+              <span>02</span>
+              <h3>Build</h3>
+              <p>
+                We create the right solution based on your goals and workflow.
+              </p>
+            </div>
+
+            <div class="process-step-card">
+              <span>03</span>
+              <h3>Optimize</h3>
+              <p>
+                We refine the system so it works clearly, smoothly, and
+                effectively.
+              </p>
+            </div>
           </div>
+        </section>
+        <section class="solutions-cta-section">
+          <p class="desktop-label">READY TO IMPROVE YOUR SYSTEMS?</p>
 
-          <div class="solution-service-card">
-            <h3>Administrative Tools</h3>
-            <p class="solution-price">Custom Quote</p>
-            <p>Internal management tools designed around your workflow.</p>
-          </div>
+          <h2>Let’s Build A Smarter Way To Operate</h2>
 
-          <div class="solution-service-card">
-            <h3>Custom Solutions</h3>
-            <p class="solution-price">Request Consultation</p>
-            <p>
-              Tailored digital solutions built specifically for your business
-              needs.
-            </p>
-          </div>
-        </div>
-      </section>
+          <p>
+            Whether you need better lead handling, booking support, automation,
+            or a custom business tool, we’ll help you create the right solution.
+          </p>
 
-      <section class="growth-services-section" id="growth-services">
-        <p class="desktop-label">GROWTH SERVICES</p>
-
-        <h2>Support Beyond Design And Systems</h2>
-
-        <p class="growth-services-intro">
-          For businesses looking to improve visibility, performance, and
-          strategic growth.
-        </p>
-
-        <div class="growth-services-grid">
-          <div class="growth-service-card">
-            <h3>SEO Setup</h3>
-            <p class="growth-price">Starting at $300+</p>
-            <p>
-              Foundational search visibility improvements for better online
-              discoverability.
-            </p>
-          </div>
-
-          <div class="growth-service-card">
-            <h3>Analytics & Reporting</h3>
-            <p class="growth-price">Starting at $300+</p>
-            <p>
-              Better visibility into website performance and customer activity.
-            </p>
-          </div>
-
-          <div class="growth-service-card">
-            <h3>Performance Optimization</h3>
-            <p class="growth-price">Starting at $500+</p>
-            <p>Improve website speed, user experience, and performance.</p>
-          </div>
-
-          <div class="growth-service-card">
-            <h3>Conversion Optimization</h3>
-            <p class="growth-price">Custom Quote</p>
-            <p>
-              Improve how effectively your website turns visitors into
-              opportunities.
-            </p>
-          </div>
-
-          <div class="growth-service-card">
-            <h3>Strategy Consulting</h3>
-            <p class="growth-price">Consultation Based</p>
-            <p>Business-focused strategic guidance tailored to your goals.</p>
-          </div>
-
-          <div class="growth-service-card">
-            <h3>Custom Growth Solutions</h3>
-            <p class="growth-price">Request Consultation</p>
-            <p>
-              Flexible support for businesses pursuing long-term digital growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="solutions-benefits-section">
-        <p class="desktop-label">WHY IT MATTERS</p>
-
-        <h2>Better Systems Create Better Business Outcomes</h2>
-
-        <div class="solutions-benefits-grid">
-          <div class="benefit-card">
-            <h3>Save Time</h3>
-            <p>
-              Reduce repetitive tasks and free up valuable time for
-              higher-priority work.
-            </p>
-          </div>
-
-          <div class="benefit-card">
-            <h3>Respond Faster</h3>
-            <p>
-              Faster inquiry handling and better customer response times can
-              improve conversions.
-            </p>
-          </div>
-
-          <div class="benefit-card">
-            <h3>Stay Organized</h3>
-            <p>
-              Keep important business activity, customer requests, and processes
-              structured and easy to manage.
-            </p>
-          </div>
-
-          <div class="benefit-card">
-            <h3>Improve Efficiency</h3>
-            <p>
-              Smarter workflows help businesses operate more consistently and
-              with fewer manual errors.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="solutions-process-section">
-        <p class="desktop-label">HOW IT WORKS</p>
-
-        <h2>A Simple Process Built Around Your Business</h2>
-
-        <div class="solutions-process-grid">
-          <div class="process-step-card">
-            <span>01</span>
-            <h3>Consult</h3>
-            <p>
-              We learn how your business operates and where support is needed.
-            </p>
-          </div>
-
-          <div class="process-step-card">
-            <span>02</span>
-            <h3>Build</h3>
-            <p>
-              We create the right solution based on your goals and workflow.
-            </p>
-          </div>
-
-          <div class="process-step-card">
-            <span>03</span>
-            <h3>Optimize</h3>
-            <p>
-              We refine the system so it works clearly, smoothly, and
-              effectively.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="solutions-cta-section">
-        <p class="desktop-label">READY TO IMPROVE YOUR SYSTEMS?</p>
-
-        <h2>Let’s Build A Smarter Way To Operate</h2>
-
-        <p>
-          Whether you need better lead handling, booking support, automation, or
-          a custom business tool, we’ll help you create the right solution.
-        </p>
-
-        <a href="#desktop-contact" class="nav-btn">Schedule Consultation</a>
-      </section>
+          <a href="index.html#desktop-contact" class="nav-btn"
+            >Schedule Consultation</a
+          >
+        </section>
+      </div>
     </div>
 
     <footer class="desktop-footer">
@@ -539,8 +964,6 @@
           <h4>Quick Links</h4>
           <a>Home</a>
           <a>About Us</a>
-          <a>Services</a>
-          <a>Industries</a>
           <a>Contact</a>
         </div>
 
