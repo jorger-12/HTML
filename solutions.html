@@ -58,7 +58,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/solutions.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/solutions.css" />
+    <link rel="stylesheet" href="css/solutions-mobile.css" />
   </head>
 
   <body>
@@ -99,11 +100,44 @@
         </li>
       </ul>
 
-      <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <!-- MOBILE MENU -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-top">
+          <img src="images/SKlogo1.png" class="menu-logo" />
+          <div class="close-btn" onclick="closeMenu()">✕</div>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <div class="menu-body">
+          <ul class="menu-links">
+            <li><a href="index.html" onclick="closeMenu()">HOME</a></li>
+            <li>
+              <a href="#website-development" onclick="closeMenu()">WEBSITES</a>
+            </li>
+            <li>
+              <a href="#solutions-section" onclick="closeMenu()">SOLUTIONS</a>
+            </li>
+            <li>
+              <a href="index.html#desktop-contact" onclick="closeMenu()"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="mobile-cta"
+            onclick="
+              closeMenu();
+              location.href = 'index.html#desktop-contact';
+            "
+          >
+            REQUEST PRIVATE CONSULTATION
+          </div>
+        </div>
       </div>
+
+      <div class="menu-overlay" id="menuOverlay"></div>
     </nav>
 
     <section class="solutions-visual-hero">

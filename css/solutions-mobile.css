@@ -1,0 +1,124 @@
+/* solutions-mobile.css */
+
+/* SOLUTIONS MOBILE */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex !important;
+
+    position: fixed;
+    top: 14px;
+    right: 14px;
+
+    z-index: 99999;
+
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(228, 195, 118, 0.35);
+    border-radius: 10px;
+
+    padding: 8px;
+  }
+
+  .hero-brand {
+    top: 0px;
+    left: -100px;
+
+    gap: 6px;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .hero-logo-main {
+    height: 55px;
+  }
+
+  .hero-logo-text {
+    height: 28px;
+  }
+
+  .solutions-visual-hero {
+    min-height: 200px;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .solutions-hero-copy {
+    margin-top: -10px;
+    padding: 25px 20px 60px;
+  }
+
+  .solutions-hero-copy .hero-title {
+    font-size: 52px;
+    line-height: 0.9;
+  }
+
+  .solutions-hero-copy .hero-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .solutions-hero-copy .hero-desc {
+    max-width: 320px;
+    margin: 20px auto;
+    font-size: 16px;
+  }
+
+  .website-suite-card,
+  .business-suite-card {
+    width: calc(100% - 28px);
+    margin: 0 auto 28px;
+    padding: 28px 18px;
+    border-radius: 24px;
+  }
+
+  .website-pricing-section h2,
+  .website-care-section h2,
+  .solutions-overview h2,
+  .growth-services-section h2 {
+    font-size: 30px;
+    line-height: 1.05;
+  }
+
+  .website-pricing-grid,
+  .website-care-grid,
+  .solutions-grid,
+  .growth-services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .website-package-card,
+  .care-plan-card,
+  .solution-card,
+  .growth-service-card {
+    width: 100%;
+  }
+
+  .website-process-top {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .website-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .addon-hybrid-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .addon-side-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .package-modal,
+  .addon-modal {
+    width: 94vw;
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+}

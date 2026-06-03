@@ -972,14 +972,16 @@ addonButtons.forEach((button, index) => {
   });
 });
 
-addonModalClose.addEventListener("click", closeAddonModal);
+if (addonModal && addonModalClose && addonNextBtn && addonPrevBtn) {
+  addonModalClose.addEventListener("click", closeAddonModal);
 
-addonModal.addEventListener("click", (e) => {
-  if (e.target === addonModal) closeAddonModal();
-});
+  addonModal.addEventListener("click", (e) => {
+    if (e.target === addonModal) closeAddonModal();
+  });
 
-addonNextBtn.addEventListener("click", () => changeAddon(1));
-addonPrevBtn.addEventListener("click", () => changeAddon(-1));
+  addonNextBtn.addEventListener("click", () => changeAddon(1));
+  addonPrevBtn.addEventListener("click", () => changeAddon(-1));
+}
 
 document.addEventListener("keydown", (e) => {
   if (!addonModal.classList.contains("active")) return;
