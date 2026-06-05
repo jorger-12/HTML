@@ -496,7 +496,7 @@ nav.hide {
 }
 
 .hero-logo-text {
-  height: clamp(100px, 3vw, 120px);
+  height: clamp(100px, 3vw, 100px);
   width: auto;
 }
 

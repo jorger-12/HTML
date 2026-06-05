@@ -95,63 +95,96 @@ html {
   color: #e4c376 !important;
 }
 
-.solutions-visual-hero {
+/* SOLUTIONS HERO */
+
+.hero-logo-main {
+  height: clamp(70px, 5vw, 90px);
+  width: auto;
+}
+
+.hero-logo-text {
+  height: clamp(70px, 4vw, 90px);
+  width: auto;
+}
+
+.solutions-hero {
   position: relative;
-  min-height: clamp(420px, 52vw, 640px);
 
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)),
-    url("../images/SKsolutionsbg.png");
+  height: clamp(420px, 42vw, 720px);
 
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: #000;
-}
-
-.solutions-hero-copy {
   background: #000;
-  text-align: center;
-
-  padding: 28px 20px 90px;
-  margin-top: 0;
-
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: visible;
 }
 
-.solutions-hero-copy .hero-title {
+.solutions-hero-image {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center -50px;
+
+  margin-top: 0;
+}
+
+.solutions-hero-intro {
   width: 100%;
   max-width: 1200px;
 
-  font-size: clamp(42px, 5vw, 48px);
-  line-height: 1;
+  margin: 70px auto 90px;
+
+  padding: 0 20px;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 10;
+
+  background: transparent;
+}
+
+.solutions-title {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  text-align: center;
+
+  font-size: clamp(30px, 4.4vw, 60px);
+  line-height: 0.95;
   font-weight: 900;
 
   white-space: nowrap;
-  transform: scaleX(0.9);
-  transform-origin: center;
+
+  margin: 0 auto 6px;
 }
 
-.solutions-hero-copy .hero-sub {
-  margin-top: 10px;
+.solutions-sub {
   color: #e4c376;
-  font-size: 13px;
-  letter-spacing: 5px;
+
+  font-size: clamp(11px, 0.9vw, 15px);
+  letter-spacing: clamp(2px, 0.25vw, 5px);
   font-weight: 900;
+
   white-space: nowrap;
+  text-align: center;
+
+  margin: 0 auto 12px;
 }
 
-.solutions-hero-copy .hero-desc {
-  margin-top: 0px;
-  max-width: 960px;
+.solutions-desc {
+  max-width: 850px;
 
   color: #fff;
-  font-size: 18px;
+
+  font-size: clamp(16px, 1.1vw, 20px);
   line-height: 1.6;
+
+  text-align: center;
+
+  margin: 0 auto 20px;
 }
 
 .nav-btn {
@@ -159,10 +192,11 @@ html {
   align-items: center;
   justify-content: center;
 
-  min-width: 280px;
-  height: 68px;
+  min-width: 240px;
+  height: 38px;
 
-  padding: 0 40px;
+  margin-top: 0;
+  padding: 16px 42px;
 
   border-radius: 999px;
   border: none;
@@ -172,34 +206,7 @@ html {
   color: #111;
   font-size: 14px;
   font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  box-shadow:
-    0 12px 30px rgba(228, 195, 118, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
-
-  transition: all 0.3s ease;
-}
-.nav-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 280px;
-  height: 40px;
-
-  padding: 0 40px;
-
-  border-radius: 999px;
-  border: none;
-
-  background: linear-gradient(135deg, #f0d48b 0%, #e4c376 40%, #cfa742 100%);
-
-  color: #111;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 
   box-shadow:
