@@ -2,33 +2,65 @@
 
 /* SOLUTIONS MOBILE */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .hamburger {
+  nav {
     display: flex !important;
-
-    position: fixed;
-    top: 14px;
-    right: 14px;
-
-    z-index: 99999;
-
-    background: rgba(0, 0, 0, 0.85);
-    border: 1px solid rgba(228, 195, 118, 0.35);
-    border-radius: 10px;
-
-    padding: 8px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    transform: none !important;
+    width: 100%;
+    height: 60px;
+    z-index: 99998;
   }
 
-  .hero-brand {
-    top: 0px;
-    left: -100px;
+  .hamburger.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .hamburger {
+    pointer-events: auto;
+    display: flex;
 
-    gap: 6px;
-    width: 90%;
-    justify-content: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+  body:has(.mobile-menu.active) .hamburger {
+    display: none !important;
+  }
+  .hamburger,
+  .close-btn {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .close-btn {
+    border: none;
+    background: transparent;
+    padding: 12px;
+    touch-action: manipulation;
+  }
+
+  .mobile-menu {
+    z-index: 5000;
+  }
+
+  .mobile-menu.active {
+    transform: translateX(0) !important;
+  }
+
+  .menu-overlay {
+    z-index: 4999;
+  }
+
+  .menu-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .close-btn {
+    z-index: 5001;
+    position: absolute;
   }
 
   .hero-logo-main {
@@ -39,31 +71,97 @@
     height: 28px;
   }
 
+  .website-suite-card .desktop-label,
+  .business-suite-card .desktop-label {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding: 14px 18px;
+
+    font-size: 14px !important;
+    letter-spacing: 4px !important;
+
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .website-suite-card .desktop-label::before,
+  .website-suite-card .desktop-label::after,
+  .business-suite-card .desktop-label::before,
+  .business-suite-card .desktop-label::after {
+    width: 34px !important;
+    flex-shrink: 1;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* MOBILE SOLUTIONS HERO */
   .solutions-visual-hero {
-    min-height: 200px;
+    min-height: 280px;
+    background-size: 110%;
     background-position: center top;
-    background-size: cover;
+    overflow: hidden;
+  }
+
+  .hero-brand {
+    top: 10px;
+    left: 14px !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  .hero-logo-main {
+    height: 48px;
+  }
+
+  .hero-logo-text {
+    height: 48px;
   }
 
   .solutions-hero-copy {
-    margin-top: -10px;
-    padding: 25px 20px 60px;
+    margin-top: 0;
+    padding: 28px 20px 42px;
+    text-align: center;
+    overflow: hidden;
   }
 
   .solutions-hero-copy .hero-title {
-    font-size: 52px;
-    line-height: 0.9;
+    font-size: 32px;
+    line-height: 0.92;
+    max-width: 320px;
+    margin: 0 auto 18px;
   }
 
   .solutions-hero-copy .hero-sub {
-    font-size: 11px;
-    letter-spacing: 2px;
+    max-width: 280px;
+    margin: 0 auto 22px;
+
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: 1.5px;
   }
 
   .solutions-hero-copy .hero-desc {
-    max-width: 320px;
-    margin: 20px auto;
-    font-size: 16px;
+    max-width: 310px;
+    margin: 0 auto 26px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .solutions-hero-copy .nav-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: min(285px, 88%);
+    padding: 14px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 0;
   }
 
   .website-suite-card,
@@ -120,5 +218,105 @@
     width: 94vw;
     max-height: 88vh;
     overflow-y: auto;
+  }
+
+  .desktop-footer {
+    display: none;
+  }
+
+  footer {
+    position: relative;
+
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.45)),
+      url("../images/SKmbackground.jpeg");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    border-top: none;
+    text-align: left;
+    min-height: 420px;
+    padding: 210px 24px 45px;
+
+    color: #fff;
+    font-size: 0;
+    line-height: 1.4;
+  }
+
+  .footer-logo {
+    width: 150px;
+    margin-left: -5px;
+    margin-top: -45px;
+  }
+
+  .social-icons {
+    position: absolute;
+    left: 43px;
+    bottom: 75px;
+  }
+
+  .social-icons img {
+    width: 100px;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 10px rgba(228, 195, 118, 0.45));
+  }
+  .social-icons img:active {
+    transform: scale(0.96);
+  }
+
+  footer::after {
+    content: "© 2026 SK International Strategy & Consulting LLC";
+    position: absolute;
+    left: 30px;
+    bottom: 14px;
+    color: #fff;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  footer br {
+    display: none;
+  }
+  .footer-contact {
+    position: absolute;
+    left: 43px;
+    bottom: 36px;
+    z-index: 2;
+  }
+
+  .footer-contact p {
+    color: #e4c376;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+    margin-left: -14px;
+  }
+
+  .footer-contact a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+  }
+  .footer-email {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: -14px;
+  }
+  .footer-email span {
+    color: #e4c376;
+    font-size: 12px;
+    line-height: 1;
   }
 }

@@ -1,5 +1,17 @@
 /* Solutions 2nd Page Begins */
 
+body {
+  background: #000;
+}
+
+.page-frame {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+}
+
 /* NAV DROPDOWN */
 html {
   scroll-behavior: smooth;
@@ -85,14 +97,14 @@ html {
 
 .solutions-visual-hero {
   position: relative;
-  min-height: 58vh;
+  min-height: clamp(420px, 52vw, 640px);
 
   background:
-    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)),
     url("../images/SKsolutionsbg.png");
 
-  background-size: 100%;
-  background-position: center -80px;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   background-color: #000;
 }
@@ -101,22 +113,14 @@ html {
   background: #000;
   text-align: center;
 
-  padding: 10px 20px 95px;
-
-  margin-top: -180px;
+  padding: 28px 20px 90px;
+  margin-top: 0;
 
   overflow: hidden;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.solutions-hero-copy .hero-sub,
-.solutions-hero-copy .hero-desc,
-.solutions-hero-copy .nav-btn {
-  position: relative;
-  top: -20px;
 }
 
 .solutions-hero-copy .hero-title {
@@ -3764,4 +3768,10 @@ html {
 
 .social-icons img {
   width: 150px;
+}
+
+@media (min-width: 769px) {
+  .mobile-footer {
+    display: none !important;
+  }
 }

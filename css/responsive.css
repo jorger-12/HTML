@@ -30,6 +30,17 @@
   .hamburger {
     display: flex;
   }
+  .hamburger,
+  .close-btn {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .close-btn {
+    border: none;
+    background: transparent;
+    padding: 12px;
+    touch-action: manipulation;
+  }
 
   .mobile-home {
     display: block;
