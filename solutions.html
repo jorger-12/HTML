@@ -259,7 +259,23 @@
               >
             </div>
           </div>
+
+          <div class="mobile-packages">
+            <div class="package-carousel-controls">
+              <button id="packagePrev">❮</button>
+
+              <div class="package-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <button id="packageNext">❯</button>
+            </div>
+          </div>
         </section>
+
         <!-- PACKAGE MODAL -->
         <div class="package-modal-overlay" id="packageModal">
           <div class="package-modal">
@@ -376,6 +392,56 @@
           </div>
         </section>
 
+        <div class="addons-wrapper">
+          <section class="mobile-process-carousel">
+            <div class="mobile-process-wrap">
+              <div class="process-carousel" id="processCarousel">
+                <div class="process-step-card" data-index="0">
+                  <div class="process-number">01</div>
+                  <h3>Choose Package</h3>
+                  <p>Select the website option that fits your goals.</p>
+                </div>
+
+                <div class="process-step-card" data-index="1">
+                  <div class="process-number">02</div>
+                  <h3>Scope & Quote</h3>
+                  <p>Confirm features, timeline, and project direction.</p>
+                </div>
+
+                <div class="process-step-card" data-index="2">
+                  <div class="process-number">03</div>
+                  <h3>Strategy Call</h3>
+                  <p>Align on content, priorities, and customer experience.</p>
+                </div>
+
+                <div class="process-step-card" data-index="3">
+                  <div class="process-number">04</div>
+                  <h3>Design & Build</h3>
+                  <p>Your website is built with close communication.</p>
+                </div>
+
+                <div class="process-step-card" data-index="4">
+                  <div class="process-number">05</div>
+                  <h3>Launch</h3>
+                  <p>Final review, deployment, and optional support.</p>
+                </div>
+              </div>
+
+              <div class="process-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="mobile-process-footer">
+                Clear communication throughout the entire build process.
+              </div>
+            </div>
+          </section>
+        </div>
+
         <p class="desktop-label">WEBSITE ADD-ONS</p>
 
         <h2>Customize Your Website Build</h2>
@@ -386,340 +452,500 @@
           digital tools.
         </p>
 
-        <section class="website-addons-section" id="website-addons">
-          <div class="addons-section-headings">
-            <div class="addons-heading-card addons-heading-left">
-              <h3>Premium Features</h3>
+        <div class="desktop-addons">
+          <section class="website-addons-section" id="website-addons">
+            <div class="addons-section-headings">
+              <div class="addons-heading-card addons-heading-left">
+                <h3>Premium Features</h3>
+              </div>
+
+              <div class="addons-heading-card addons-heading-right">
+                <h3>Essential Enhancements</h3>
+              </div>
             </div>
 
-            <div class="addons-heading-card addons-heading-right">
-              <h3>Essential Enhancements</h3>
+            <div class="featured-addons-list">
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="quote">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Advanced Quote Form</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price">$500+</span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Smart intake forms that capture the right information and
+                      qualify leads instantly.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>Basic Contact Form</h4>
+
+                    <p>Simple inquiry form with email notifications.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+
+                      <strong> $150+ </strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Review Integration</h4>
+
+                    <p>Display Google reviews and build trust with visitors.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+
+                      <strong> $150+ </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 2 -->
+
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="booking">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Appointment Booking</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price">$500+</span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Allow customers to request or schedule appointments online
+                      with less manual coordination.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>Google Maps</h4>
+                    <p>Help customers quickly find your business location.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$75+</strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Live Chat</h4>
+                    <p>Engage visitors instantly with real-time messaging.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$200+</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="leads">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Lead Management Dashboard</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price">$250+</span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Organize inquiries, follow-ups, and customer opportunities
+                      in one clean system.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>Analytics Reports</h4>
+                    <p>Track visitor behavior and conversion performance.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$250+</strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Auto Follow-Up</h4>
+                    <p>Send reminders and automated customer follow-ups.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$400+</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 4 -->
+
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="payments">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Payment Integration</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price">$500+</span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Accept deposits, invoices, and customer payments directly
+                      through your website.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>FAQ Section</h4>
+                    <p>Answer common customer questions directly on-site.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$200+</strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Extra Pages</h4>
+                    <p>Expand your website with additional service pages.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$200+</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 5 -->
+
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="portal">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Client Portal</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price">$1,000+</span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Give customers a secure place to view updates, documents,
+                      invoices, and project details.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>SEO Optimization</h4>
+                    <p>Improve rankings and website discoverability.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$300+</strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Blog Setup</h4>
+                    <p>Create SEO-focused content publishing sections.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$250+</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 6 -->
+
+              <div class="addon-hybrid-row">
+                <div class="addon-row-card" data-addon="automation">
+                  <div class="addon-row-copy">
+                    <div class="addon-row-top">
+                      <h3>Workflow Automation</h3>
+
+                      <div class="addon-price-group">
+                        <span class="addon-starting-at">Starting At</span>
+                        <span class="addon-row-price"> Custom<br />Quote </span>
+                      </div>
+                    </div>
+
+                    <p>
+                      Automate follow-ups, reminders, notifications, and
+                      internal business tasks.
+                    </p>
+                  </div>
+
+                  <div class="addon-actions">
+                    <button class="addon-example-btn">View Example</button>
+                  </div>
+                </div>
+
+                <div class="addon-side-stack">
+                  <div class="addon-mini-card">
+                    <h4>Multi-Location</h4>
+                    <p>Manage multiple service areas and business locations.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong>$500+</strong>
+                    </div>
+                  </div>
+
+                  <div class="addon-mini-card">
+                    <h4>Copywriting</h4>
+                    <p>Professional website writing tailored to conversions.</p>
+                    <div class="mini-price-box">
+                      <span class="mini-starting-at"> Starting At </span>
+                      <strong> $150+ </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- ADD-ON EXAMPLE MODAL -->
+          <div class="addon-modal-overlay" id="addonModal">
+            <div class="addon-modal">
+              <button class="addon-modal-close" id="addonModalClose">×</button>
+
+              <div class="addon-modal-header">
+                <div class="addon-modal-title-content">
+                  <p id="addonModalLabel">Premium Add-On</p>
+
+                  <h3 id="addonModalTitle">Advanced Quote Form</h3>
+
+                  <span id="addonModalPrice">$500 – $750+</span>
+                </div>
+
+                <div class="addon-modal-info-card">
+                  <h4>System Highlights</h4>
+
+                  <ul id="addonModalInfo"></ul>
+                </div>
+              </div>
+
+              <div class="addon-modal-preview" id="addonModalPreview">
+                <!-- JS will place mockup here -->
+              </div>
+
+              <div class="addon-modal-footer">
+                <button class="addon-modal-nav" id="addonPrevBtn">
+                  ← Previous Add-On
+                </button>
+
+                <div class="addon-modal-center">
+                  <a href="index.html#desktop-contact" class="addon-modal-cta"
+                    >Discuss This Feature</a
+                  >
+
+                  <div class="addon-progress-track">
+                    <div
+                      class="addon-progress-fill"
+                      id="addonProgressFill"
+                    ></div>
+                  </div>
+                </div>
+
+                <button class="addon-modal-nav" id="addonNextBtn">
+                  Next Add-On →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile ADDONS SECTION -->
+        <div class="mobile-addons">
+          <div class="mobile-premium-wrap">
+            <p class="desktop-label">PREMIUM FEATURES</p>
+
+            <div class="mobile-addon-carousel" id="premiumAddonCarousel">
+              <div class="mobile-premium-card active" data-addon="quote">
+                <h3>Advanced Quote Form</h3>
+                <p>Smart intake forms that qualify leads instantly.</p>
+                <span>$500+</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+
+              <div class="mobile-premium-card" data-addon="booking">
+                <h3>Appointment Booking</h3>
+                <p>Allow customers to schedule online.</p>
+                <span>$500+</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+
+              <div class="mobile-premium-card" data-addon="leads">
+                <h3>Lead Management Dashboard</h3>
+                <p>Organize inquiries and follow-ups.</p>
+                <span>$250+</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+
+              <div class="mobile-premium-card" data-addon="payments">
+                <h3>Payment Integration</h3>
+                <p>Accept payments directly on-site.</p>
+                <span>$500+</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+
+              <div class="mobile-premium-card" data-addon="portal">
+                <h3>Client Portal</h3>
+                <p>Secure customer area and file access.</p>
+                <span>$1,000+</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+
+              <div class="mobile-premium-card" data-addon="automation">
+                <h3>Workflow Automation</h3>
+                <p>Automate repetitive business tasks.</p>
+                <span>Custom Quote</span>
+                <button class="addon-example-btn">View Details</button>
+              </div>
+            </div>
+
+            <div class="mobile-addon-dots" id="premiumAddonDots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
 
-          <div class="featured-addons-list">
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="quote">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Advanced Quote Form</h3>
+          <div class="mobile-essential-wrap">
+            <p class="desktop-label" style="margin-top: 50px">
+              ESSENTIAL ENHANCEMENTS
+            </p>
 
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price">$500+</span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Smart intake forms that capture the right information and
-                    qualify leads instantly.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
+            <div class="mobile-essential-carousel" id="essentialAddonCarousel">
+              <div class="mobile-essential-card">
+                <h4>Basic Contact Form</h4>
+                <p>Simple inquiry form with email notifications.</p>
+                <span>$150+</span>
               </div>
 
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>Basic Contact Form</h4>
-
-                  <p>Simple inquiry form with email notifications.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-
-                    <strong> $150+ </strong>
-                  </div>
-                </div>
-
-                <div class="addon-mini-card">
-                  <h4>Review Integration</h4>
-
-                  <p>Display Google reviews and build trust with visitors.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-
-                    <strong> $150+ </strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ROW 2 -->
-
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="booking">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Appointment Booking</h3>
-
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price">$500+</span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Allow customers to request or schedule appointments online
-                    with less manual coordination.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
+              <div class="mobile-essential-card">
+                <h4>Review Integration</h4>
+                <p>Display Google reviews and build trust.</p>
+                <span>$150+</span>
               </div>
 
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>Google Maps</h4>
-                  <p>Help customers quickly find your business location.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$75+</strong>
-                  </div>
-                </div>
+              <div class="mobile-essential-card">
+                <h4>Google Maps</h4>
+                <p>Help customers find your location quickly.</p>
+                <span>$75+</span>
+              </div>
 
-                <div class="addon-mini-card">
-                  <h4>Live Chat</h4>
-                  <p>Engage visitors instantly with real-time messaging.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$200+</strong>
-                  </div>
-                </div>
+              <div class="mobile-essential-card">
+                <h4>Live Chat</h4>
+                <p>Engage visitors with real-time messaging.</p>
+                <span>$200+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Analytics Reports</h4>
+                <p>Track visitor behavior and conversions.</p>
+                <span>$250+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Auto Follow-Up</h4>
+                <p>Send reminders and customer follow-ups.</p>
+                <span>$400+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>FAQ Section</h4>
+                <p>Answer common questions directly on-site.</p>
+                <span>$200+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Extra Pages</h4>
+                <p>Expand your site with more service pages.</p>
+                <span>$200+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>SEO Optimization</h4>
+                <p>Improve rankings and discoverability.</p>
+                <span>$300+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Blog Setup</h4>
+                <p>Create SEO-focused content sections.</p>
+                <span>$250+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Multi-Location</h4>
+                <p>Manage multiple service areas or locations.</p>
+                <span>$500+</span>
+              </div>
+
+              <div class="mobile-essential-card">
+                <h4>Copywriting</h4>
+                <p>Professional website writing for conversions.</p>
+                <span>$150+</span>
               </div>
             </div>
 
-            <!-- ROW 3 -->
-
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="leads">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Lead Management Dashboard</h3>
-
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price">$250+</span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Organize inquiries, follow-ups, and customer opportunities
-                    in one clean system.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
-              </div>
-
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>Analytics Reports</h4>
-                  <p>Track visitor behavior and conversion performance.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$250+</strong>
-                  </div>
-                </div>
-
-                <div class="addon-mini-card">
-                  <h4>Auto Follow-Up</h4>
-                  <p>Send reminders and automated customer follow-ups.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$400+</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ROW 4 -->
-
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="payments">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Payment Integration</h3>
-
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price">$500+</span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Accept deposits, invoices, and customer payments directly
-                    through your website.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
-              </div>
-
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>FAQ Section</h4>
-                  <p>Answer common customer questions directly on-site.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$200+</strong>
-                  </div>
-                </div>
-
-                <div class="addon-mini-card">
-                  <h4>Extra Pages</h4>
-                  <p>Expand your website with additional service pages.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$200+</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ROW 5 -->
-
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="portal">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Client Portal</h3>
-
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price">$1,000+</span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Give customers a secure place to view updates, documents,
-                    invoices, and project details.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
-              </div>
-
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>SEO Optimization</h4>
-                  <p>Improve rankings and website discoverability.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$300+</strong>
-                  </div>
-                </div>
-
-                <div class="addon-mini-card">
-                  <h4>Blog Setup</h4>
-                  <p>Create SEO-focused content publishing sections.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$250+</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ROW 6 -->
-
-            <div class="addon-hybrid-row">
-              <div class="addon-row-card" data-addon="automation">
-                <div class="addon-row-copy">
-                  <div class="addon-row-top">
-                    <h3>Workflow Automation</h3>
-
-                    <div class="addon-price-group">
-                      <span class="addon-starting-at">Starting At</span>
-                      <span class="addon-row-price"> Custom<br />Quote </span>
-                    </div>
-                  </div>
-
-                  <p>
-                    Automate follow-ups, reminders, notifications, and internal
-                    business tasks.
-                  </p>
-                </div>
-
-                <div class="addon-actions">
-                  <button class="addon-example-btn">View Example</button>
-                </div>
-              </div>
-
-              <div class="addon-side-stack">
-                <div class="addon-mini-card">
-                  <h4>Multi-Location</h4>
-                  <p>Manage multiple service areas and business locations.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong>$500+</strong>
-                  </div>
-                </div>
-
-                <div class="addon-mini-card">
-                  <h4>Copywriting</h4>
-                  <p>Professional website writing tailored to conversions.</p>
-                  <div class="mini-price-box">
-                    <span class="mini-starting-at"> Starting At </span>
-                    <strong> $150+ </strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ADD-ON EXAMPLE MODAL -->
-        <div class="addon-modal-overlay" id="addonModal">
-          <div class="addon-modal">
-            <button class="addon-modal-close" id="addonModalClose">×</button>
-
-            <div class="addon-modal-header">
-              <div class="addon-modal-title-content">
-                <p id="addonModalLabel">Premium Add-On</p>
-
-                <h3 id="addonModalTitle">Advanced Quote Form</h3>
-
-                <span id="addonModalPrice">$500 – $750+</span>
-              </div>
-
-              <div class="addon-modal-info-card">
-                <h4>System Highlights</h4>
-
-                <ul id="addonModalInfo"></ul>
-              </div>
-            </div>
-
-            <div class="addon-modal-preview" id="addonModalPreview">
-              <!-- JS will place mockup here -->
-            </div>
-
-            <div class="addon-modal-footer">
-              <button class="addon-modal-nav" id="addonPrevBtn">
-                ← Previous Add-On
-              </button>
-
-              <div class="addon-modal-center">
-                <a href="index.html#desktop-contact" class="addon-modal-cta"
-                  >Discuss This Feature</a
-                >
-
-                <div class="addon-progress-track">
-                  <div class="addon-progress-fill" id="addonProgressFill"></div>
-                </div>
-              </div>
-
-              <button class="addon-modal-nav" id="addonNextBtn">
-                Next Add-On →
-              </button>
+            <div class="mobile-addon-dots" id="essentialAddonDots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>

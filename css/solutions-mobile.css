@@ -71,16 +71,17 @@
 
   .website-suite-card .desktop-label,
   .business-suite-card .desktop-label {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: fit-content !important;
+    max-width: 95% !important;
 
     padding: 14px 18px;
 
-    font-size: 14px !important;
-    letter-spacing: 4px !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
 
-    gap: 12px;
-    box-sizing: border-box;
+    white-space: nowrap !important;
+
+    margin: 0 auto 20px;
   }
 
   .website-suite-card .desktop-label::before,
@@ -121,17 +122,17 @@
   }
 
   .hero-logo-main {
-    height: 42px;
+    height: 50px;
   }
 
   .hero-logo-text {
-    height: 24px;
+    height: 42px;
   }
 
   .solutions-hero-intro {
     width: 100%;
     max-width: 100%;
-    margin: -10px auto 50px;
+    margin: -10px auto 20px;
     padding: 0 18px;
     text-align: center;
     background: transparent;
@@ -183,11 +184,513 @@
   .website-care-section h2,
   .solutions-overview h2,
   .growth-services-section h2 {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.05;
+
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .website-suite-card .website-pricing-intro,
+  .website-suite-card .website-care-intro,
+  .business-suite-card .solutions-overview-intro,
+  .business-suite-card .growth-services-intro {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    max-width: 320px !important;
+    margin: 0 auto 18px !important;
   }
 
-  .website-pricing-grid,
+  .website-pricing-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding: 12px 4px 18px;
+    margin-top: 24px;
+  }
+
+  .website-pricing-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .package-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    margin-top: 0px;
+  }
+
+  .package-carousel-controls button {
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111;
+    color: #e4c376;
+
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .package-dots {
+    display: flex;
+    gap: 10px;
+  }
+
+  .package-dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .package-dots .active {
+    background: #e4c376;
+  }
+
+  .website-package-card {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: center;
+
+    min-height: 320px;
+    padding: 34px 26px 28px;
+    border-radius: 22px;
+  }
+  .website-package-card {
+    box-shadow: none !important;
+  }
+
+  /* Tighten card text */
+  .package-tag {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .website-package-card h3 {
+    font-size: 24px;
+    margin: 4px 0 0;
+  }
+
+  .package-price {
+    margin: 10px 0 8px;
+    min-height: 58px;
+  }
+
+  .package-desc {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* Keep buttons aligned */
+  .package-cta {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  /* Fix Custom Quote being too big */
+  .website-package-card:last-child .package-price {
+    font-size: 28px !important;
+  }
+
+  .featured-package {
+    transform: none;
+  }
+
+  .featured-package:hover {
+    transform: none;
+  }
+
+  /* HIDE DESKTOP PROCESS ON MOBILE */
+  .website-process-section {
+    display: none;
+  }
+
+  /* SHOW MOBILE VERSION */
+  .mobile-process-carousel {
+    display: block;
+    margin: 24px 0;
+  }
+
+  .mobile-process-wrap {
+    background: linear-gradient(180deg, #111, #000);
+    border-radius: 24px;
+
+    border: 1px solid rgba(228, 195, 118, 0.18);
+
+    padding: 20px 16px;
+
+    overflow: hidden;
+  }
+
+  /* CAROUSEL */
+
+  .process-carousel {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding: 18%;
+
+    padding: 8px 18% 12px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .process-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .process-step-card {
+    flex: 0 0 72%;
+    scroll-snap-align: center;
+
+    min-height: 135px;
+    padding: 16px 12px;
+    border-radius: 16px;
+
+    background: rgba(255, 250, 238, 0.98);
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease;
+
+    transform: scale(0.88);
+    opacity: 0.45;
+  }
+
+  .process-step-card.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .process-step-card:not(.active) {
+    transform: scale(0.88);
+    opacity: 0.45;
+  }
+
+  .process-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .process-dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .process-dots span.active {
+    background: #e4c376;
+    transform: scale(1.25);
+  }
+
+  .process-number {
+    width: 36px;
+    height: 36px;
+
+    margin: 0 auto 14px;
+
+    border-radius: 50%;
+
+    background: #e4c376;
+
+    color: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .process-step-card h3 {
+    color: #111;
+    font-size: 18px;
+    font-weight: 900;
+
+    margin-bottom: 6px;
+  }
+
+  .process-step-card p {
+    color: rgba(17, 17, 17, 0.7);
+
+    font-size: 11px;
+    line-height: 1.5;
+
+    max-width: 180px;
+
+    margin: 0 auto;
+  }
+
+  /* FOOTER */
+
+  .mobile-process-footer {
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(228, 195, 118, 0.25);
+
+    color: #e4c376;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  .desktop-addons {
+    display: block;
+  }
+
+  .mobile-addons {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-addons {
+      display: none;
+    }
+
+    .mobile-addons {
+      display: block;
+    }
+  }
+
+  .mobile-addons {
+    padding: 10px 0 30px;
+  }
+
+  .mobile-premium-wrap {
+    background: linear-gradient(180deg, #111, #000);
+
+    border: 1px solid rgba(228, 195, 118, 0.18);
+
+    border-radius: 24px;
+
+    padding: 22px 0 18px;
+
+    margin-bottom: 36px;
+
+    overflow: hidden;
+  }
+
+  .mobile-addon-carousel {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    padding: 8px 14% 16px;
+    scroll-padding: 14%;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-addon-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-premium-card {
+    flex: 0 0 72%;
+    scroll-snap-align: center;
+
+    background: rgba(255, 250, 238, 0.98);
+
+    border-radius: 20px;
+
+    min-height: 230px;
+
+    padding: 22px 18px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    opacity: 0.45;
+    transform: scale(0.9);
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease;
+  }
+
+  .mobile-premium-card.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .mobile-premium-card h3 {
+    color: #111;
+    font-size: 22px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .mobile-premium-card p {
+    color: rgba(17, 17, 17, 0.72);
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 18px;
+  }
+
+  .mobile-premium-card span {
+    color: #9f7b32;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 18px;
+  }
+
+  .mobile-premium-card button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+
+    background: linear-gradient(145deg, #f0d48b, #d6ab45);
+    color: #111;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .mobile-addon-dots {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 6px;
+  }
+
+  .mobile-addon-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+  }
+
+  .mobile-addon-dots span.active {
+    background: #e4c376;
+    transform: scale(1.25);
+  }
+
+  .mobile-essential-wrap {
+    background: linear-gradient(180deg, #111, #000);
+
+    border: 1px solid rgba(228, 195, 118, 0.18);
+
+    border-radius: 24px;
+
+    padding: 10px 0 18px;
+
+    margin-bottom: 36px;
+
+    overflow: hidden;
+  }
+  .mobile-essential-wrap .desktop-label {
+    background: #fff;
+
+    color: #9f7b32;
+
+    border: none;
+
+    font-weight: 900;
+  }
+
+  .mobile-essential-carousel {
+    display: flex;
+    gap: px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    padding: 8px 14% 16px;
+    scroll-padding: 14%;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-essential-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-essential-card {
+    flex: 0 0 72%;
+    scroll-snap-align: center;
+
+    background: rgba(255, 250, 238, 0.98);
+    border: 1px solid rgba(228, 195, 118, 0.24);
+    border-radius: 20px;
+
+    min-height: 190px;
+    padding: 22px 16px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    opacity: 0.45;
+    transform: scale(0.9);
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease;
+  }
+
+  .mobile-essential-card.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .mobile-essential-card h4 {
+    color: #111;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 10px;
+  }
+
+  .mobile-essential-card p {
+    color: rgba(17, 17, 17, 0.72);
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .mobile-essential-card span {
+    color: #9f7b32;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
   .website-care-grid,
   .solutions-grid,
   .growth-services-grid {
@@ -195,16 +698,10 @@
     gap: 18px;
   }
 
-  .website-package-card,
   .care-plan-card,
   .solution-card,
   .growth-service-card {
     width: 100%;
-  }
-
-  .website-process-top {
-    flex-direction: column;
-    gap: 18px;
   }
 
   .website-flow-arrow {

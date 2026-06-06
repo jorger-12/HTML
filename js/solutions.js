@@ -664,3 +664,187 @@ if (addonCTA) {
     );
   });
 }
+
+/* MOBILE PACKAGE CAROUSEL */
+const packageGrid = document.querySelector(".website-pricing-grid");
+const packageCards = document.querySelectorAll(".website-package-card");
+const packagePrev = document.getElementById("packagePrev");
+const packageNext = document.getElementById("packageNext");
+const packageDots = document.querySelectorAll(".package-dots span");
+
+let currentPackageSlide = 0;
+
+function updatePackageDots() {
+  packageDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentPackageSlide);
+  });
+}
+
+function scrollToPackage(index) {
+  if (!packageGrid || !packageCards.length) return;
+
+  if (index < 0) {
+    index = packageCards.length - 1;
+  }
+
+  if (index >= packageCards.length) {
+    index = 0;
+  }
+
+  currentPackageSlide = index;
+
+  packageCards[currentPackageSlide].scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest",
+  });
+
+  updatePackageDots();
+}
+
+packagePrev?.addEventListener("click", () => {
+  scrollToPackage(currentPackageSlide - 1);
+});
+
+packageNext?.addEventListener("click", () => {
+  scrollToPackage(currentPackageSlide + 1);
+});
+
+packageDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    scrollToPackage(index);
+  });
+});
+
+/* Update dots when user swipes manually */
+packageGrid?.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  packageCards.forEach((card, index) => {
+    const distance = Math.abs(
+      card.getBoundingClientRect().left -
+        packageGrid.getBoundingClientRect().left
+    );
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  currentPackageSlide = closestIndex;
+  updatePackageDots();
+});
+
+/* Start on first card */
+/* MOBILE PROCESS CAROUSEL ACTIVE CARD */
+const processCarousel = document.getElementById("processCarousel");
+const processCards = document.querySelectorAll(".process-step-card");
+const processDots = document.querySelectorAll(".process-dots span");
+
+function updateProcessActiveCard(activeIndex) {
+  processCards.forEach((card, index) => {
+    card.classList.toggle("active", index === activeIndex);
+  });
+
+  processDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === activeIndex);
+  });
+}
+
+processCarousel?.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  processCards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const carouselCenter =
+      processCarousel.scrollLeft + processCarousel.clientWidth / 2;
+
+    const distance = Math.abs(cardCenter - carouselCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  updateProcessActiveCard(closestIndex);
+});
+
+updateProcessActiveCard(0);
+
+/* MOBILE PREMIUM ADD-ONS CAROUSEL */
+const premiumAddonCarousel = document.getElementById("premiumAddonCarousel");
+const premiumAddonCards = document.querySelectorAll(".mobile-premium-card");
+const premiumAddonDots = document.querySelectorAll("#premiumAddonDots span");
+
+function updatePremiumAddonActive(activeIndex) {
+  premiumAddonCards.forEach((card, index) => {
+    card.classList.toggle("active", index === activeIndex);
+  });
+
+  premiumAddonDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === activeIndex);
+  });
+}
+
+premiumAddonCarousel?.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  premiumAddonCards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const carouselCenter =
+      premiumAddonCarousel.scrollLeft + premiumAddonCarousel.clientWidth / 2;
+
+    const distance = Math.abs(cardCenter - carouselCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  updatePremiumAddonActive(closestIndex);
+});
+
+updatePremiumAddonActive(0);
+
+/* MOBILE ESSENTIAL ADD-ONS CAROUSEL */
+const essentialAddonCarousel = document.getElementById("essentialAddonCarousel");
+const essentialAddonCards = document.querySelectorAll(".mobile-essential-card");
+const essentialAddonDots = document.querySelectorAll("#essentialAddonDots span");
+
+function updateEssentialAddonActive(activeIndex) {
+  essentialAddonCards.forEach((card, index) => {
+    card.classList.toggle("active", index === activeIndex);
+  });
+
+  essentialAddonDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === activeIndex);
+  });
+}
+
+essentialAddonCarousel?.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  essentialAddonCards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const carouselCenter =
+      essentialAddonCarousel.scrollLeft + essentialAddonCarousel.clientWidth / 2;
+
+    const distance = Math.abs(cardCenter - carouselCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  updateEssentialAddonActive(closestIndex);
+});
+
+updateEssentialAddonActive(0);

@@ -1,5 +1,11 @@
 /* Solutions 2nd Page Begins */
-
+@media (min-width: 769px) {
+  .mobile-packages,
+  .addons-wrapper,
+  .mobile-addons {
+    display: none !important;
+  }
+}
 body {
   background: #000;
 }
