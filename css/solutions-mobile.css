@@ -1029,17 +1029,27 @@
   }
 
   .booking-mockup {
-    gap: 10px !important;
+    gap: 8px !important;
+    padding: 8px !important;
+    min-height: auto !important;
   }
 
   .calendar-card,
   .booking-side {
-    padding: 12px !important;
-    border-radius: 18px !important;
+    padding: 10px 12px !important;
+    border-radius: 16px !important;
   }
 
   .calendar-head {
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .calendar-head strong {
+    font-size: 16px !important;
+  }
+
+  .calendar-head span {
+    font-size: 11px !important;
   }
 
   .calendar-grid {
@@ -1048,28 +1058,40 @@
   }
 
   .calendar-grid b:nth-child(n + 9) {
-    display: none;
+    display: none !important;
   }
 
   .calendar-grid b {
-    height: 26px !important;
-    font-size: 11px !important;
+    height: 24px !important;
+    min-height: 24px !important;
+    font-size: 10.5px !important;
     border-radius: 8px !important;
   }
 
   .calendar-summary {
-    margin-top: 12px !important;
-    padding-top: 10px !important;
+    margin-top: 8px !important;
+    padding-top: 8px !important;
   }
 
-  .calendar-summary span,
+  .calendar-summary span {
+    font-size: 10px !important;
+    margin-bottom: 2px !important;
+  }
+
   .calendar-summary strong {
-    font-size: 11px !important;
+    font-size: 10px !important;
+  }
+
+  .booking-side .mockup-label {
+    margin-bottom: 4px !important;
+    font-size: 8px !important;
+    letter-spacing: 3px !important;
   }
 
   .booking-side h4 {
-    font-size: 22px !important;
-    margin-bottom: 12px !important;
+    font-size: 19px !important;
+    margin-bottom: 8px !important;
+    line-height: 1 !important;
   }
 
   .time-slot {
@@ -1079,18 +1101,316 @@
 
     text-align: center !important;
 
-    height: 28px !important;
+    height: 26px !important;
+    min-height: 26px !important;
     padding: 0 !important;
+    margin-bottom: 5px !important;
+
+    border-radius: 10px !important;
+    font-size: 13px !important;
   }
+
   .time-slot.active {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+
+    font-size: 13px !important;
   }
 
   .booking-side .fake-primary-btn {
-    height: 34px !important;
+    height: 30px !important;
+    min-height: 30px !important;
+
     margin-top: 4px !important;
+    padding: 0 12px !important;
+
+    font-size: 7px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .dashboard-mockup {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    padding: 12px !important;
+  }
+
+  .analytics-card {
+    min-height: 70px !important;
+    padding: 10px 6px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+  }
+
+  .analytics-card p {
+    font-size: 8px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .analytics-card strong {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+
+  .analytics-card span {
+    font-size: 7px !important;
+    line-height: 1.2 !important;
+  }
+
+  .lead-table {
+    grid-column: 1 / -1 !important;
+    margin-top: 4px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  .lead-table div {
+    grid-template-columns: 1fr 72px 58px !important;
+    padding: 9px 10px !important;
+    gap: 6px !important;
+  }
+
+  .lead-table b,
+  .lead-table span,
+  .lead-table em,
+  .lead-table strong {
+    font-size: 9px !important;
+  }
+
+  .lead-table em {
+    padding: 4px 6px !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+  }
+
+  /* PAYMENT INTEGRATION MOBILE */
+  .payment-mockup {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    min-height: auto !important;
+  }
+
+  .invoice-card,
+  .checkout-card {
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .invoice-card .mockup-label {
+    font-size: 8px !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .invoice-card h4,
+  .checkout-card h4 {
+    font-size: 15px !important;
+    padding: 0 !important;
+    margin: 0 0 8px !important;
+    margin-top: 8px !important;
+  }
+
+  .invoice-line {
+    padding: 4px 0 !important;
+  }
+
+  .invoice-line span,
+  .invoice-line strong {
+    font-size: 11px !important;
+  }
+
+  .invoice-total {
+    margin-top: 6px !important;
+    padding-top: 8px !important;
+    font-size: 17px !important;
+  }
+
+  .invoice-total span,
+  .invoice-total strong {
+    font-size: 17px !important;
+  }
+
+  .fake-card-chip {
+    height: 86px !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .card-brand {
+    font-size: 10px !important;
+  }
+
+  .card-number {
+    font-size: 17px !important;
+  }
+
+  .card-holder {
+    font-size: 9px !important;
+  }
+
+  .checkout-card .fake-field {
+    padding: 10px 14px !important;
+    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+  }
+
+  .checkout-card .fake-field strong {
+    font-size: 11px !important;
+  }
+
+  .checkout-card .fake-primary-btn {
+    height: 34px !important;
+    padding: 0 14px !important;
+    margin-top: 6px !important;
+    font-size: 8px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .portal-mockup {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    min-height: auto !important;
+  }
+
+  .portal-sidebar,
+  .portal-content {
+    min-height: auto !important;
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .portal-status-title {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .portal-sidebar span {
+    padding: 8px 10px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+  }
+
+  .portal-customer-card {
+    margin: 8px 0 10px !important;
+    padding: 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .portal-customer-card small {
+    font-size: 8px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .portal-customer-card h4 {
+    font-size: 15px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .portal-customer-card p {
+    font-size: 10px !important;
+  }
+
+  .progress-large {
+    height: 8px !important;
+    margin: 10px 0 12px !important;
+  }
+
+  .portal-content h4 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .portal-files {
+    margin-top: 4px !important;
+  }
+
+  .portal-files div {
+    padding: 7px 0 !important;
+    font-size: 11px !important;
+  }
+
+  .portal-files span,
+  .portal-files strong {
+    font-size: 11px !important;
+  }
+
+  /* WORKFLOW AUTOMATION MOBILE */
+  .automation-mockup {
+    min-height: auto !important;
+    padding: 10px !important;
+  }
+
+  .automation-panel {
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .automation-header {
+    margin-bottom: 12px !important;
+  }
+
+  .automation-header h4 {
+    font-size: 17px !important;
+  }
+
+  .automation-header > span {
+    margin-left: 8px !important;
+    padding: 5px 10px !important;
+  }
+
+  .workflow-row {
+    gap: 6px !important;
+  }
+
+  .workflow-node {
+    min-height: 58px !important;
+    padding: 8px 6px !important;
+    border-radius: 12px !important;
+  }
+
+  .workflow-node strong {
+    font-size: 10px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .workflow-node span {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
+
+  .workflow-line {
+    width: 10px !important;
+  }
+
+  .workflow-line::after {
+    font-size: 12px !important;
+  }
+
+  .automation-stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 12px !important;
+  }
+
+  .automation-stats div {
+    padding: 8px 5px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+  }
+
+  .automation-stats strong {
+    font-size: 13px !important;
+  }
+
+  .automation-stats span {
+    font-size: 8px !important;
   }
 
   .desktop-footer {
