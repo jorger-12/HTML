@@ -305,11 +305,11 @@ const addonExamples = [
         </div>
 
         <div class="calendar-grid">
-          <b class="unavailable">5</b>
-          <b class="unavailable">6</b>
           <b class="unavailable">7</b>
           <b class="unavailable">8</b>
           <b class="unavailable">9</b>
+          <b class="unavailable">10</b>
+          <b class="unavailable">11</b>
 
           <b>12</b>
           <b>13</b>
@@ -588,12 +588,25 @@ if (quoteForm) {
   });
 }
 
-  addonModalInfo.innerHTML = "";
+ addonModalInfo.innerHTML = "";
+
+item.info.forEach((feature) => {
+  const li = document.createElement("li");
+  li.textContent = feature;
+  addonModalInfo.appendChild(li);
+});
+
+const mobileAddonInfo = document.getElementById("mobileAddonInfo");
+
+if (mobileAddonInfo) {
+  mobileAddonInfo.innerHTML = "";
+
   item.info.forEach((feature) => {
     const li = document.createElement("li");
     li.textContent = feature;
-    addonModalInfo.appendChild(li);
+    mobileAddonInfo.appendChild(li);
   });
+}
 
   addonProgressFill.style.width = `${((index + 1) / addonExamples.length) * 100}%`;
 }
@@ -625,9 +638,21 @@ function changeAddon(direction) {
 }
 
 if (addonButtons.length) {
-  addonButtons.forEach((button, index) => {
+  addonButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
+
+      const card = button.closest("[data-addon]");
+      if (!card) return;
+
+      const addonKey = card.dataset.addon;
+
+      const index = addonExamples.findIndex(
+        (item) => item.theme === addonKey
+      );
+
+      if (index === -1) return;
+
       openAddonModal(index);
     });
   });
@@ -640,8 +665,15 @@ if (addonModal && addonModalClose && addonNextBtn && addonPrevBtn) {
     if (e.target === addonModal) closeAddonModal();
   });
 
-  addonNextBtn.addEventListener("click", () => changeAddon(1));
-  addonPrevBtn.addEventListener("click", () => changeAddon(-1));
+addonNextBtn.addEventListener("click", () => {
+  changeAddon(1);
+  addonNextBtn.blur();
+});
+
+addonPrevBtn.addEventListener("click", () => {
+  changeAddon(-1);
+  addonPrevBtn.blur();
+});
 }
 
 if (addonModal) {
@@ -848,3 +880,46 @@ essentialAddonCarousel?.addEventListener("scroll", () => {
 });
 
 updateEssentialAddonActive(0);
+
+if (addonButtons.length) {
+  addonButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const card = button.closest("[data-addon]");
+      if (!card) return;
+
+      const addonKey = card.dataset.addon;
+
+      const index = addonExamples.findIndex(
+        (item) => item.theme === addonKey
+      );
+
+      if (index === -1) return;
+
+      openAddonModal(index);
+    });
+  });
+}
+
+const mobileAddonTabs = document.querySelectorAll(".mobile-addon-tab");
+const mobileAddonPanels = document.querySelectorAll(".mobile-addon-panel");
+
+mobileAddonTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const selectedTab = tab.dataset.tab;
+
+    mobileAddonTabs.forEach((btn) =>
+      btn.classList.remove("active")
+    );
+
+    tab.classList.add("active");
+
+    mobileAddonPanels.forEach((panel) => {
+      panel.classList.toggle(
+        "active",
+        panel.dataset.panel === selectedTab
+      );
+    });
+  });
+});

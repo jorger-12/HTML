@@ -744,55 +744,6 @@
               </div>
             </div>
           </section>
-          <!-- ADD-ON EXAMPLE MODAL -->
-          <div class="addon-modal-overlay" id="addonModal">
-            <div class="addon-modal">
-              <button class="addon-modal-close" id="addonModalClose">×</button>
-
-              <div class="addon-modal-header">
-                <div class="addon-modal-title-content">
-                  <p id="addonModalLabel">Premium Add-On</p>
-
-                  <h3 id="addonModalTitle">Advanced Quote Form</h3>
-
-                  <span id="addonModalPrice">$500 – $750+</span>
-                </div>
-
-                <div class="addon-modal-info-card">
-                  <h4>System Highlights</h4>
-
-                  <ul id="addonModalInfo"></ul>
-                </div>
-              </div>
-
-              <div class="addon-modal-preview" id="addonModalPreview">
-                <!-- JS will place mockup here -->
-              </div>
-
-              <div class="addon-modal-footer">
-                <button class="addon-modal-nav" id="addonPrevBtn">
-                  ← Previous Add-On
-                </button>
-
-                <div class="addon-modal-center">
-                  <a href="index.html#desktop-contact" class="addon-modal-cta"
-                    >Discuss This Feature</a
-                  >
-
-                  <div class="addon-progress-track">
-                    <div
-                      class="addon-progress-fill"
-                      id="addonProgressFill"
-                    ></div>
-                  </div>
-                </div>
-
-                <button class="addon-modal-nav" id="addonNextBtn">
-                  Next Add-On →
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Mobile ADDONS SECTION -->
@@ -808,7 +759,7 @@
                 <button class="addon-example-btn">View Details</button>
               </div>
 
-              <div class="mobile-premium-card" data-addon="booking">
+              <div class="mobile-premium-card" data-addon="dashboard">
                 <h3>Appointment Booking</h3>
                 <p>Allow customers to schedule online.</p>
                 <span>$500+</span>
@@ -946,6 +897,67 @@
               <span></span>
               <span></span>
               <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADD-ON EXAMPLE MODAL -->
+        <div class="addon-modal-overlay" id="addonModal">
+          <div class="addon-modal">
+            <button class="addon-modal-close" id="addonModalClose">×</button>
+
+            <div class="addon-modal-header">
+              <div class="addon-modal-title-content">
+                <p id="addonModalLabel">Premium Add-On</p>
+
+                <h3 id="addonModalTitle">Advanced Quote Form</h3>
+
+                <span id="addonModalPrice">$500 – $750+</span>
+              </div>
+
+              <div class="addon-modal-info-card">
+                <h4>System Highlights</h4>
+
+                <ul id="addonModalInfo"></ul>
+              </div>
+            </div>
+
+            <div class="mobile-addon-tabs">
+              <button class="mobile-addon-tab active" data-tab="info">
+                Information
+              </button>
+
+              <button class="mobile-addon-tab" data-tab="example">
+                Example
+              </button>
+            </div>
+
+            <div class="mobile-addon-panel active" data-panel="info">
+              <div class="mobile-addon-info-copy">
+                <ul id="mobileAddonInfo"></ul>
+              </div>
+            </div>
+
+            <div class="mobile-addon-panel" data-panel="example">
+              <div class="addon-modal-preview" id="addonModalPreview">
+                <!-- JS will place mockup here -->
+              </div>
+            </div>
+
+            <div class="addon-modal-footer">
+              <button class="addon-modal-nav" id="addonPrevBtn">‹</button>
+
+              <div class="addon-modal-center">
+                <a href="index.html#desktop-contact" class="addon-modal-cta"
+                  >Discuss This Feature</a
+                >
+
+                <div class="addon-progress-track">
+                  <div class="addon-progress-fill" id="addonProgressFill"></div>
+                </div>
+              </div>
+
+              <button class="addon-modal-nav" id="addonNextBtn">›</button>
             </div>
           </div>
         </div>
