@@ -157,7 +157,7 @@ if (packageButtons.length) {
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
 
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
       document.body.style.paddingRight = `${scrollbarWidth}px`;
 
       packageModal.classList.add("active");
@@ -174,8 +174,19 @@ function changePackage(direction) {
 
 function closePackageModal() {
   packageModal.classList.remove("active");
-  document.body.style.overflow = "";
+  document.body.classList.remove("modal-open");
   document.body.style.paddingRight = "";
+
+  const packageCards = document.querySelectorAll(".website-package-card");
+  const activeCard = packageCards[currentPackageIndex];
+
+  if (activeCard) {
+    activeCard.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }
 }
 
 if (packageModal) {
@@ -626,8 +637,20 @@ function openAddonModal(index) {
 function closeAddonModal() {
   addonModal.classList.remove("active");
 
-  document.body.style.overflow = "";
+  document.body.classList.remove("modal-open");
   document.body.style.paddingRight = "";
+
+  const premiumCards = document.querySelectorAll(".mobile-premium-card");
+
+  if (premiumCards[currentAddonIndex]) {
+    premiumCards[currentAddonIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
+
+  updatePremiumAddonActive(currentAddonIndex);
 }
 
 function changeAddon(direction) {
@@ -923,3 +946,87 @@ mobileAddonTabs.forEach((tab) => {
     });
   });
 });
+
+/* MOBILE WEBSITE CARE CAROUSEL */
+const careCarousel = document.querySelector(".website-care-grid");
+const careCards = document.querySelectorAll(".care-plan-card");
+
+function updateCareActive(activeIndex) {
+  careCards.forEach((card, index) => {
+    card.classList.toggle("active", index === activeIndex);
+  });
+}
+
+careCarousel?.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  careCards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const carouselCenter =
+      careCarousel.scrollLeft + careCarousel.clientWidth / 2;
+
+    const distance = Math.abs(cardCenter - carouselCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+  const careDots = document.querySelectorAll(".care-dots span");
+
+function updateCareActive(activeIndex) {
+  careCards.forEach((card, index) => {
+    card.classList.toggle("active", index === activeIndex);
+  });
+
+  careDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === activeIndex);
+  });
+}
+
+  updateCareActive(closestIndex);
+});
+
+updateCareActive(0);
+
+function setupSimpleCarousel(carouselId, dotsSelector) {
+  const carousel = document.getElementById(carouselId);
+  const dots = document.querySelectorAll(`${dotsSelector} span`);
+
+  if (!carousel || !dots.length) return;
+
+  const cards = Array.from(carousel.children);
+
+  function updateDots() {
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    const carouselCenter = carousel.scrollLeft + carousel.clientWidth / 2;
+
+    cards.forEach((card, index) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const distance = Math.abs(carouselCenter - cardCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    cards.forEach((card, index) => {
+      card.classList.toggle("active", index === closestIndex);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === closestIndex);
+    });
+  }
+
+  carousel.addEventListener("scroll", updateDots, { passive: true });
+  window.addEventListener("resize", updateDots);
+  updateDots();
+}
+
+setupSimpleCarousel("businessCarousel", ".business-carousel-dots");
+setupSimpleCarousel("growthCarousel", ".growth-carousel-dots");
+setupSimpleCarousel("benefitsCarousel", ".benefits-carousel-dots");
